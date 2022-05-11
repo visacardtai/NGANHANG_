@@ -358,12 +358,13 @@ namespace NGANHANG_
                     //lấy ra mã nhân viên lớn nhất ở site chủ: 
                     int maNVLonNhat = layRaMaNhanvienLonNhatTaiSiteChu(); 
                     
-                    int status = Program.ExecSqlNonQuery("SP_CHUYEN_CN",
+                    var status = Program.ExecSqlStoredProceduceValue("SP_CHUYEN_CN",
                                         new List<SqlParameter> { new SqlParameter("@MANV", manv.Trim()),
                                                                 new SqlParameter("@MANV2", (maNVLonNhat+1)<100?("MNV0"+(maNVLonNhat+1)) : ("MNV"+(maNVLonNhat+1))),
                                                                 new SqlParameter("@MACN", macn_new.Trim())},
                                         CommandType.StoredProcedure);
-                    if (status == 2)
+                    MessageBox.Show(status.ToString());
+                    if (status == 0)
                     {
 
                         MessageBox.Show("Chuyển chi nhánh thành công.");

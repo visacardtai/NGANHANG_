@@ -110,6 +110,28 @@ namespace NGANHANG_
 
         }
 
+        public static int ExecSqlStoredProceduceValue(String strLenh, List<SqlParameter> parameters, CommandType type)
+        {
+            if (conn.State == ConnectionState.Open) conn.Close();
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlCommand cmd = new SqlCommand(strLenh, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
+            cmd.CommandType = type;
+            cmd.CommandTimeout = 600;//secound
+
+            try
+            {
+                return (int)cmd.ExecuteScalar();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Error:" + e.Message);
+                conn.Close();
+                return e.State;//trạng thái lỗi gửi từ raiserror trong sql server qua
+            }
+        }
+
         public static SqlDataReader ExecSqlDataReader(String strLenh, List<SqlParameter> parameters, CommandType type)
         {
 
