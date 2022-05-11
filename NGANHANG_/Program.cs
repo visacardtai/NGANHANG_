@@ -13,7 +13,7 @@ namespace NGANHANG_
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static String server_publisher = "DESKTOP-PMT2906\\NH";
+        public static String server_publisher = "LAPTOP-6A02SPAJ";
         public static String servername = "";
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
@@ -28,7 +28,7 @@ namespace NGANHANG_
         public static String passwordDN = "";
         public static String database = "NGANHANG";
         public static String remotelogin = "HTKN";
-        public static String remotepassword = "1234";
+        public static String remotepassword = "123";
         public static String mlogin = "";
         public static String mGroup = "";
         public static String mHoten = "";
@@ -92,6 +92,7 @@ namespace NGANHANG_
             //SqlDataReader myReader;
             SqlCommand cmd = new SqlCommand(strLenh, conn);
             cmd.CommandType = CommandType.Text;
+            if (conn.State == ConnectionState.Open) conn.Close(); 
             if (conn.State == ConnectionState.Closed) conn.Open();
 
             try
@@ -115,6 +116,7 @@ namespace NGANHANG_
             SqlCommand cmd = new SqlCommand(strLenh, conn);
             if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
             cmd.CommandType = type;
+            if (conn.State == ConnectionState.Open) conn.Close();
             if (conn.State == ConnectionState.Closed) conn.Open();
 
             try
@@ -215,6 +217,48 @@ namespace NGANHANG_
             Application.SetCompatibleTextRenderingDefault(false);
             frMain = new frmMain();
             Application.Run(frMain);
+        }
+
+        public static int ExecSqlNonQuery(String strLenh, List<SqlParameter> parameters, CommandType type)
+        {
+            SqlCommand cmd = new SqlCommand(strLenh, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
+            cmd.CommandType = type;
+            cmd.CommandTimeout = 600; //second
+
+            //Chỗ này lưu ý nhé: vì khi một connection đang mở thì mình phải tắt connection đó đi,
+            ////rồi mở lại cái mới chứ không được sài cái connection đang mở đó
+            ///vì cơ chế của C# là khi có cái mở sẵn, nó sẽ cho kết nối rồi một tí nó sẽ tự động tắt đi, nên mình phải chủ đọng trước
+            ///câu này thầy thư có hỏi
+            if (conn.State == ConnectionState.Open) conn.Close();
+            if (conn.State == ConnectionState.Closed) conn.Open();
+
+            using (conn)
+            {
+                try
+                {
+
+                    return cmd.ExecuteNonQuery();
+
+                }
+                catch (SqlException e)
+                {
+                    MessageBox.Show("Error: " + e.Message);
+                    return e.State; //trạng thái lỗi gửi từ raiserror trong sql server qua
+                }
+            }
+            /*if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                conn.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                conn.Close();
+                MessageBox.Show("Error: " + e.Message);
+                return e.State; //trạng thái lỗi gửi từ raiserror trong sql server qua
+            }*/
         }
     }
 }

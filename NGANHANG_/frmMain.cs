@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace NGANHANG_
 {
@@ -65,7 +66,25 @@ namespace NGANHANG_
 
         private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form frm = this.CheckExists(typeof(frmNV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmNV fmNV = new frmNV();
+                fmNV.MdiParent = this;
+                fmNV.Show();
+            }
+        }
+        private Form CheckExists(Type ftype)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == ftype)
+                {
+                    return f;
+                }
+            }
+            return null;
         }
 
         private void btnKH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
