@@ -40,8 +40,7 @@ namespace NGANHANG_
             this.btnKH = new DevExpress.XtraBars.BarButtonItem();
             this.pageNghiepVu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pgGuiRut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnGui = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRut = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGuiRut = new DevExpress.XtraBars.BarButtonItem();
             this.pgChuyenTien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnCLCN = new DevExpress.XtraBars.BarButtonItem();
             this.btnCT = new DevExpress.XtraBars.BarButtonItem();
@@ -72,7 +71,7 @@ namespace NGANHANG_
             // txtHoTen
             // 
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(76, 25);
+            this.txtHoTen.Size = new System.Drawing.Size(63, 20);
             this.txtHoTen.Text = "Họ Tên: ";
             // 
             // pageDanhMuc
@@ -123,24 +122,17 @@ namespace NGANHANG_
             // 
             // pgGuiRut
             // 
-            this.pgGuiRut.ItemLinks.Add(this.btnGui);
-            this.pgGuiRut.ItemLinks.Add(this.btnRut);
+            this.pgGuiRut.ItemLinks.Add(this.btnGuiRut);
             this.pgGuiRut.Name = "pgGuiRut";
             this.pgGuiRut.Text = "Gửi, Rút Tiền";
             // 
-            // btnGui
+            // btnGuiRut
             // 
-            this.btnGui.Caption = "Gửi Tiền";
-            this.btnGui.Id = 6;
-            this.btnGui.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_request_money;
-            this.btnGui.Name = "btnGui";
-            // 
-            // btnRut
-            // 
-            this.btnRut.Caption = "Rút Tiền";
-            this.btnRut.Id = 8;
-            this.btnRut.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_initiate_money_transfer;
-            this.btnRut.Name = "btnRut";
+            this.btnGuiRut.Caption = "Gửi , Rút Tiền";
+            this.btnGuiRut.Id = 6;
+            this.btnGuiRut.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGuiRut.ImageOptions.SvgImage")));
+            this.btnGuiRut.Name = "btnGuiRut";
+            this.btnGuiRut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGuiRut_ItemClick);
             // 
             // pgChuyenTien
             // 
@@ -223,7 +215,7 @@ namespace NGANHANG_
             this.btnLogin.Id = 1;
             this.btnLogin.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_login;
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+            this.btnLogin.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogin_ItemClick);
             // 
@@ -234,7 +226,7 @@ namespace NGANHANG_
             this.btnCreateAcount.Id = 2;
             this.btnCreateAcount.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_add_user_group_man_man;
             this.btnCreateAcount.Name = "btnCreateAcount";
-            this.btnCreateAcount.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+            this.btnCreateAcount.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnCreateAcount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreateAcount_ItemClick);
             // 
@@ -245,7 +237,7 @@ namespace NGANHANG_
             this.btnLogout.Id = 3;
             this.btnLogout.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_Logout;
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+            this.btnLogout.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
@@ -260,22 +252,23 @@ namespace NGANHANG_
             this.txtMANV,
             this.txtHoTen,
             this.txtNhom});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 651);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 549);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1145, 32);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 11, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(891, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // txtMANV
             // 
             this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Size = new System.Drawing.Size(75, 25);
+            this.txtMANV.Size = new System.Drawing.Size(61, 20);
             this.txtMANV.Text = "Mã NV: ";
             // 
             // txtNhom
             // 
             this.txtNhom.Name = "txtNhom";
-            this.txtNhom.Size = new System.Drawing.Size(71, 25);
+            this.txtNhom.Size = new System.Drawing.Size(57, 20);
             this.txtNhom.Text = "Nhóm: ";
             // 
             // pageHeThong
@@ -296,9 +289,8 @@ namespace NGANHANG_
             this.btnLogout,
             this.btnNV,
             this.btnKH,
-            this.btnGui,
+            this.btnGuiRut,
             this.btnCLCN,
-            this.btnRut,
             this.btnCT,
             this.btnKXNV,
             this.btnSK,
@@ -315,7 +307,7 @@ namespace NGANHANG_
             this.pageDanhMuc,
             this.pageNghiepVu,
             this.pageBaoCao});
-            this.ribbonControl2.Size = new System.Drawing.Size(1145, 231);
+            this.ribbonControl2.Size = new System.Drawing.Size(891, 193);
             // 
             // barButtonItem14
             // 
@@ -337,16 +329,15 @@ namespace NGANHANG_
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1145, 683);
+            this.ClientSize = new System.Drawing.Size(891, 575);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_euro_bank_building;
             this.IconOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.Full;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl2;
             this.Text = "Màn Hình Chính";
@@ -370,8 +361,7 @@ namespace NGANHANG_
         private DevExpress.XtraBars.BarButtonItem btnKH;
         private DevExpress.XtraBars.Ribbon.RibbonPage pageNghiepVu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgGuiRut;
-        private DevExpress.XtraBars.BarButtonItem btnGui;
-        private DevExpress.XtraBars.BarButtonItem btnRut;
+        private DevExpress.XtraBars.BarButtonItem btnGuiRut;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgChuyenTien;
         private DevExpress.XtraBars.BarButtonItem btnCLCN;
         private DevExpress.XtraBars.BarButtonItem btnCT;

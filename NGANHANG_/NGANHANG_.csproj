@@ -46,7 +46,7 @@
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -86,6 +86,12 @@
     <Compile Include="frmCreateAccount_.Designer.cs">
       <DependentUpon>frmCreateAccount_.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGDGuiRut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGDGuiRut.Designer.cs">
+      <DependentUpon>frmGDGuiRut.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,14 @@
     <Compile Include="frmNV.Designer.cs">
       <DependentUpon>frmNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHACHHANGDS.cs">
+      <DependentUpon>KHACHHANGDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANGDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KHACHHANGDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmChuyenCN.resx">
@@ -114,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateAccount_.resx">
       <DependentUpon>frmCreateAccount_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGDGuiRut.resx">
+      <DependentUpon>frmGDGuiRut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -146,6 +163,17 @@
     </None>
     <None Include="DS.xss">
       <DependentUpon>DS.xsd</DependentUpon>
+    </None>
+    <None Include="KHACHHANGDS.xsc">
+      <DependentUpon>KHACHHANGDS.xsd</DependentUpon>
+    </None>
+    <None Include="KHACHHANGDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KHACHHANGDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KHACHHANGDS.xss">
+      <DependentUpon>KHACHHANGDS.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

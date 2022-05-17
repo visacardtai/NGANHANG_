@@ -243,25 +243,28 @@ namespace NGANHANG_
 
         public static int ExecSqlNonQuery(String strLenh, List<SqlParameter> parameters, CommandType type)
         {
-            SqlCommand cmd = new SqlCommand(strLenh, conn);
-            if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
-            cmd.CommandType = type;
-            cmd.CommandTimeout = 600; //second
 
             //Chỗ này lưu ý nhé: vì khi một connection đang mở thì mình phải tắt connection đó đi,
             ////rồi mở lại cái mới chứ không được sài cái connection đang mở đó
             ///vì cơ chế của C# là khi có cái mở sẵn, nó sẽ cho kết nối rồi một tí nó sẽ tự động tắt đi, nên mình phải chủ đọng trước
             ///câu này thầy thư có hỏi
+            KetNoi(true, true); 
             if (conn.State == ConnectionState.Open) conn.Close();
-            if (conn.State == ConnectionState.Closed) conn.Open();
+                conn.Open();
+            
+            SqlCommand cmd = new SqlCommand(strLenh, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
+            cmd.CommandType = type;
+            cmd.CommandTimeout = 600; //second
 
             using (conn)
             {
                 try
                 {
-
-                    return cmd.ExecuteNonQuery();
-
+                    MessageBox.Show("line 263");
+                    int value = cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return value; 
                 }
                 catch (SqlException e)
                 {
