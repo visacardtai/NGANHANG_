@@ -261,7 +261,6 @@ namespace NGANHANG_
             {
                 try
                 {
-                    MessageBox.Show("line 263");
                     int value = cmd.ExecuteNonQuery();
                     conn.Close();
                     return value; 

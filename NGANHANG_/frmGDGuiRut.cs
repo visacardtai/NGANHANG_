@@ -14,7 +14,8 @@ namespace NGANHANG_
     public partial class frmGDGuiRut : Form
     {
         int sotk_pos;
-        long soTienLonNhatCoTheRut = 200000; 
+        long soTienLonNhatCoTheRut = 0; 
+        
         public frmGDGuiRut()
         {
             InitializeComponent();
@@ -119,7 +120,8 @@ namespace NGANHANG_
             panelControl1.Visible = true;
             sotk_pos = taiKhoanBindingSource.Position;                 //sotknhan luon trùng sotkchuyen lúc đầu để dễ kiểm lỗi trùng sotk
             txtSoTK.Text = ((DataRowView)taiKhoanBindingSource[taiKhoanBindingSource.Position])["SOTK"].ToString().Trim();
-            //soTienLonNhatCoTheRut =long.Parse(((DataRowView)taiKhoanBindingSource[taiKhoanBindingSource.Position])["SODU"].ToString().Trim());
+            String soduHienTai = ((DataRowView)taiKhoanBindingSource[taiKhoanBindingSource.Position])["SODU"].ToString().Trim().Replace(",", ""); 
+            soTienLonNhatCoTheRut =long.Parse(soduHienTai.Substring(0, soduHienTai.Length - 5));
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -131,30 +133,30 @@ namespace NGANHANG_
                 string manv = Program.username;
                 
                 sotk = txtSoTK.Text.ToString();
-                string loaigd = cmbLoaiGD.Text.Trim();
+                string loaigd ="GT";
                 float sotien = float.Parse(txtSoTien.Text.Trim());                  //số tiền gởi/rút phải ít nhất 100,000
-                if (loaigd.Length == 0)
+                if (cmbLoaiGD.SelectedIndex==-1)
                 {
                     MessageBox.Show("Vui lòng chọn loại giao dịch.", "", MessageBoxButtons.OK);
                     return;
                 }
                 if (sotien < 100000)
                 {
-                    MessageBox.Show("Số tiền phải >= 100000", "", MessageBoxButtons.OK);
+                    MessageBox.Show("Số tiền phải >= "+ string.Format("{0:#,00}", Convert.ToDecimal(100000)) + " VND", "", MessageBoxButtons.OK);
                     return;
                 }
-                if (loaigd.Equals("Rút tiền") && sotien>soTienLonNhatCoTheRut)
+                if (cmbLoaiGD.SelectedIndex==1 && sotien>soTienLonNhatCoTheRut)//kiểm tra số tiền tôi đa được rút
                 {
-                    MessageBox.Show("Số tiền tối đa có thể rút là: "+soTienLonNhatCoTheRut, "", MessageBoxButtons.OK);
+                    MessageBox.Show("Số tiền tối đa có thể rút là: "+ string.Format("{0:#,00}", Convert.ToDecimal(soTienLonNhatCoTheRut)) + " VND", "", MessageBoxButtons.OK);
                     return;
                 }
 
-                switch (loaigd)
+                switch (cmbLoaiGD.SelectedIndex)
                 {
-                    case "Gởi tiền":
+                    case 0:
                         loaigd = "GT";
                         break;
-                    case "Rút tiền":
+                    case 1:
                         loaigd = "RT";
                         break;
                 }
@@ -198,7 +200,7 @@ namespace NGANHANG_
 
         private void cmbLoaiGD_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
