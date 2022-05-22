@@ -33,6 +33,25 @@ namespace NGANHANG_
         {
             loadTK();
             loadGD();
+            //LOAD DANH SÁCH CHI NHÁNH VÀO CMOBOBOX
+            cmbChinhanh.DataSource = Program.bds_dspm;
+            cmbChinhanh.DisplayMember = "TENCN";
+            cmbChinhanh.ValueMember = "TENSERVER";
+            cmbChinhanh.SelectedIndex = Program.mChinhanh;
+
+            if (Program.mGroup.Equals("ChiNhanh"))
+            {
+                cmbChinhanh.Visible = false;
+                lbChinhanh.Visible = false; 
+            }
+            else if (Program.mGroup.Equals("NganHang"))
+            {
+                
+                cmbChinhanh.Visible = true;
+                lbChinhanh.Visible = true;
+                setupButton(); 
+            }
+
         }
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
@@ -58,6 +77,7 @@ namespace NGANHANG_
         }
         public void loadGD()
         {
+            
             this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.nhanVienTableAdapter.Fill(this.KHACHHANGDS.NhanVien);
             this.giaoDichTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -75,10 +95,22 @@ namespace NGANHANG_
             cmbLoaiGD.SelectedItem  = "Gởi tiền";
             giaoDichBindingSource.Filter = "LOAIGD='GT' OR LOAIGD='RT'";
             setupButton();
+
+            //CHỖ NÀY DÙNG ĐỂ LỌC DANH SÁCH TÀI KHOẢN TRONG CHI NHÁNH VÌ TÀI KHOẢN LÀ NHÂN BẢN NÊN LOAD HẾT, MÀ LOAD HẾT THÌ 
+            //KHÔNG HỢP LÝ VÌ NHƯ THẾ NHÂN VIÊN XEM NHƯ CÓ TOÀN QUYỀN TRÊN CẢ HAI CHI NHÁNH
+            if (Program.mChinhanh == 0)
+            {
+                this.taiKhoanBindingSource.Filter = "MACN= 'BENTHANH'";
+            }
+            else if (Program.mChinhanh == 1)
+            {
+                this.taiKhoanBindingSource.Filter = "MACN=  'TANDINH'";
+            }
+
         }
         private void setupButton()
         {
-            if (Program.mGroup == "NGANHANG")
+            if (Program.mGroup == "NganHang")
             {
                 btnLapGiaoDich.Enabled = false;
             }
@@ -201,6 +233,20 @@ namespace NGANHANG_
         private void cmbLoaiGD_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void cmbChinhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //CHỖ NÀY DÙNG ĐỂ LỌC DANH SÁCH TÀI KHOẢN TRONG CHI NHÁNH VÌ TÀI KHOẢN LÀ NHÂN BẢN NÊN LOAD HẾT, MÀ LOAD HẾT THÌ 
+            //KHÔNG HỢP LÝ VÌ NHƯ THẾ NHÂN VIÊN XEM NHƯ CÓ TOÀN QUYỀN TRÊN CẢ HAI CHI NHÁNH
+            if (cmbChinhanh.SelectedIndex == 0)
+            {
+                this.taiKhoanBindingSource.Filter = "MACN= 'BENTHANH'";
+            }
+            else if (cmbChinhanh.SelectedIndex == 1)
+            {
+                this.taiKhoanBindingSource.Filter = "MACN=  'TANDINH'";
+            }
         }
     }
 }

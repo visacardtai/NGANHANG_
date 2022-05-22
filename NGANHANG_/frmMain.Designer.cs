@@ -48,7 +48,7 @@ namespace NGANHANG_
             this.pgBCNV = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnKXNV = new DevExpress.XtraBars.BarButtonItem();
             this.pgBCKH = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnSK = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSKSTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnKHKH = new DevExpress.XtraBars.BarButtonItem();
             this.pgHTTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
@@ -170,7 +170,7 @@ namespace NGANHANG_
             // 
             this.pgBCNV.ItemLinks.Add(this.btnKXNV);
             this.pgBCNV.Name = "pgBCNV";
-            this.pgBCNV.Text = "Nhân Viên";
+            this.pgBCNV.Text = "Tài Khoản";
             // 
             // btnKXNV
             // 
@@ -181,18 +181,19 @@ namespace NGANHANG_
             // 
             // pgBCKH
             // 
-            this.pgBCKH.ItemLinks.Add(this.btnSK);
+            this.pgBCKH.ItemLinks.Add(this.btnSKSTK);
             this.pgBCKH.ItemLinks.Add(this.btnKHKH);
             this.pgBCKH.Name = "pgBCKH";
-            this.pgBCKH.Text = "Khách Hàng";
+            this.pgBCKH.Text = "Chi Nhánh";
             // 
-            // btnSK
+            // btnSKSTK
             // 
-            this.btnSK.Caption = "Sao Kê";
-            this.btnSK.Id = 12;
-            this.btnSK.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_graph;
-            this.btnSK.Name = "btnSK";
-            this.btnSK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSKSTK.Caption = "Sao Kê";
+            this.btnSKSTK.Id = 12;
+            this.btnSKSTK.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_graph;
+            this.btnSKSTK.Name = "btnSKSTK";
+            this.btnSKSTK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSKSTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSKSTK_ItemClick);
             // 
             // btnKHKH
             // 
@@ -293,7 +294,7 @@ namespace NGANHANG_
             this.btnCLCN,
             this.btnCT,
             this.btnKXNV,
-            this.btnSK,
+            this.btnSKSTK,
             this.btnKHKH,
             this.barButtonItem14,
             this.barWorkspaceMenuItem1});
@@ -369,7 +370,7 @@ namespace NGANHANG_
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgBCNV;
         private DevExpress.XtraBars.BarButtonItem btnKXNV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgBCKH;
-        private DevExpress.XtraBars.BarButtonItem btnSK;
+        private DevExpress.XtraBars.BarButtonItem btnSKSTK;
         private DevExpress.XtraBars.BarButtonItem btnKHKH;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgHTTK;
         private DevExpress.XtraBars.BarButtonItem btnLogin;

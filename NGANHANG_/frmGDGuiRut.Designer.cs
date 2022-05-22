@@ -78,6 +78,8 @@ namespace NGANHANG_
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOTKNHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nhanVienTableAdapter = new NGANHANG_.KHACHHANGDSTableAdapters.NhanVienTableAdapter();
+            this.cmbChinhanh = new System.Windows.Forms.ComboBox();
+            this.lbChinhanh = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -554,11 +556,34 @@ namespace NGANHANG_
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
+            // cmbChinhanh
+            // 
+            this.cmbChinhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChinhanh.FormattingEnabled = true;
+            this.cmbChinhanh.Location = new System.Drawing.Point(647, 18);
+            this.cmbChinhanh.Name = "cmbChinhanh";
+            this.cmbChinhanh.Size = new System.Drawing.Size(170, 24);
+            this.cmbChinhanh.TabIndex = 16;
+            this.cmbChinhanh.Visible = false;
+            this.cmbChinhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChinhanh_SelectedIndexChanged);
+            // 
+            // lbChinhanh
+            // 
+            this.lbChinhanh.AutoSize = true;
+            this.lbChinhanh.Location = new System.Drawing.Point(503, 21);
+            this.lbChinhanh.Name = "lbChinhanh";
+            this.lbChinhanh.Size = new System.Drawing.Size(115, 17);
+            this.lbChinhanh.TabIndex = 17;
+            this.lbChinhanh.Text = "TÊN CHI NHÁNH";
+            this.lbChinhanh.Visible = false;
+            // 
             // frmGDGuiRut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 734);
+            this.Controls.Add(this.lbChinhanh);
+            this.Controls.Add(this.cmbChinhanh);
             this.Controls.Add(this.giaoDichGridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.taiKhoanGridControl);
@@ -637,5 +662,7 @@ namespace NGANHANG_
         private DevExpress.XtraEditors.TextEdit mANVTextEdit;
         private DevExpress.XtraEditors.TextEdit txtSoTK;
         private System.Windows.Forms.NumericUpDown txtSoTien;
+        private System.Windows.Forms.Label lbChinhanh;
+        private System.Windows.Forms.ComboBox cmbChinhanh;
     }
 }

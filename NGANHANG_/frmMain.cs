@@ -103,5 +103,16 @@ namespace NGANHANG_
                 fmNV.Show();
             }
         }
+
+        private void btnSKSTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptLietKeDanhSachTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptLietKeDanhSachTaiKhoan f = new frptLietKeDanhSachTaiKhoan();
+                f.Show();
+            }
+        }
     }
 }
