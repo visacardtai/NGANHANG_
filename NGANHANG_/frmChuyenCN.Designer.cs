@@ -45,6 +45,7 @@ namespace NGANHANG_
             this.lbThongbao.Size = new System.Drawing.Size(496, 17);
             this.lbThongbao.TabIndex = 11;
             this.lbThongbao.Text = "Nhân viên chưa từng làm việc ở chi nhánh này, vui lòng chọn mã nhân viên mới";
+            this.lbThongbao.Visible = false;
             // 
             // btnVerify
             // 

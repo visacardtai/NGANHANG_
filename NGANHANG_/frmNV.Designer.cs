@@ -45,6 +45,7 @@ namespace NGANHANG_
             this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -68,7 +69,7 @@ namespace NGANHANG_
             this.hScrollBar1 = new DevExpress.XtraEditors.HScrollBar();
             this.gD_CHUYENTIENTableAdapter = new NGANHANG_.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lbthongbaonv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -127,7 +128,7 @@ namespace NGANHANG_
             this.nhanVienGridControl.Margin = new System.Windows.Forms.Padding(6);
             this.nhanVienGridControl.MenuManager = this.barManager1;
             this.nhanVienGridControl.Name = "nhanVienGridControl";
-            this.nhanVienGridControl.Size = new System.Drawing.Size(1426, 364);
+            this.nhanVienGridControl.Size = new System.Drawing.Size(1426, 451);
             this.nhanVienGridControl.TabIndex = 34;
             this.nhanVienGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -156,6 +157,8 @@ namespace NGANHANG_
             this.colMANV.FieldName = "MANV";
             this.colMANV.MinWidth = 25;
             this.colMANV.Name = "colMANV";
+            this.colMANV.OptionsColumn.AllowEdit = false;
+            this.colMANV.OptionsColumn.ShowInExpressionEditor = false;
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 0;
             this.colMANV.Width = 94;
@@ -214,6 +217,13 @@ namespace NGANHANG_
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 6;
             this.colMACN.Width = 94;
+            // 
+            // colTrangThaiXoa
+            // 
+            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
+            this.colTrangThaiXoa.MinWidth = 25;
+            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
+            this.colTrangThaiXoa.Width = 94;
             // 
             // barManager1
             // 
@@ -344,7 +354,7 @@ namespace NGANHANG_
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 537);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 624);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1426, 20);
             // 
@@ -354,7 +364,7 @@ namespace NGANHANG_
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 573);
             // 
             // barDockControlRight
             // 
@@ -362,7 +372,7 @@ namespace NGANHANG_
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1426, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 573);
             // 
             // panelThongtin
             // 
@@ -370,7 +380,7 @@ namespace NGANHANG_
             this.panelThongtin.Location = new System.Drawing.Point(0, 173);
             this.panelThongtin.Margin = new System.Windows.Forms.Padding(6);
             this.panelThongtin.Name = "panelThongtin";
-            this.panelThongtin.Size = new System.Drawing.Size(1426, 364);
+            this.panelThongtin.Size = new System.Drawing.Size(1426, 451);
             this.panelThongtin.TabIndex = 35;
             // 
             // gD_GOIRUTBindingSource
@@ -411,6 +421,7 @@ namespace NGANHANG_
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.lbthongbaonv);
             this.panelControl1.Controls.Add(this.cmbChinhanh);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -420,18 +431,23 @@ namespace NGANHANG_
             this.panelControl1.Size = new System.Drawing.Size(1426, 122);
             this.panelControl1.TabIndex = 33;
             // 
-            // colTrangThaiXoa
+            // lbthongbaonv
             // 
-            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
-            this.colTrangThaiXoa.MinWidth = 25;
-            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
-            this.colTrangThaiXoa.Width = 94;
+            this.lbthongbaonv.AutoSize = true;
+            this.lbthongbaonv.Font = new System.Drawing.Font("Tahoma", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbthongbaonv.ForeColor = System.Drawing.Color.Red;
+            this.lbthongbaonv.Location = new System.Drawing.Point(1131, 95);
+            this.lbthongbaonv.Name = "lbthongbaonv";
+            this.lbthongbaonv.Size = new System.Drawing.Size(520, 21);
+            this.lbthongbaonv.TabIndex = 2;
+            this.lbthongbaonv.Text = "Thông báo: Nhân viên không còn làm việc tại chi nhánh này";
+            this.lbthongbaonv.Visible = false;
             // 
             // frmNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 557);
+            this.ClientSize = new System.Drawing.Size(1426, 644);
             this.Controls.Add(this.nhanVienGridControl);
             this.Controls.Add(this.panelThongtin);
             this.Controls.Add(this.hScrollBar1);
@@ -499,5 +515,6 @@ namespace NGANHANG_
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
+        private System.Windows.Forms.Label lbthongbaonv;
     }
 }

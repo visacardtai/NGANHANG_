@@ -118,11 +118,12 @@ namespace NGANHANG_
             if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
             cmd.CommandType = type;
             cmd.CommandTimeout = 600;//secound
-
+            
             try
             {
-                return (int)cmd.ExecuteScalar();
+                int value = (int)cmd.ExecuteScalar();
                 conn.Close();
+                return value; 
             }
             catch (SqlException e)
             {
@@ -130,6 +131,7 @@ namespace NGANHANG_
                 conn.Close();
                 return e.State;//trạng thái lỗi gửi từ raiserror trong sql server qua
             }
+
         }
 
         public static SqlDataReader ExecSqlDataReader(String strLenh, List<SqlParameter> parameters, CommandType type)

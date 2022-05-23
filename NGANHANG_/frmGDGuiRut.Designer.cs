@@ -78,8 +78,6 @@ namespace NGANHANG_
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOTKNHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nhanVienTableAdapter = new NGANHANG_.KHACHHANGDSTableAdapters.NhanVienTableAdapter();
-            this.cmbChinhanh = new System.Windows.Forms.ComboBox();
-            this.lbChinhanh = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -273,6 +271,17 @@ namespace NGANHANG_
             // 
             // colSOTK
             // 
+            this.colSOTK.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSOTK.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSOTK.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSOTK.AppearanceHeader.Options.UseBackColor = true;
+            this.colSOTK.AppearanceHeader.Options.UseBorderColor = true;
+            this.colSOTK.AppearanceHeader.Options.UseFont = true;
+            this.colSOTK.AppearanceHeader.Options.UseForeColor = true;
+            this.colSOTK.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSOTK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSOTK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSOTK.Caption = "Số tài khoản";
             this.colSOTK.FieldName = "SOTK";
             this.colSOTK.MinWidth = 25;
             this.colSOTK.Name = "colSOTK";
@@ -282,6 +291,17 @@ namespace NGANHANG_
             // 
             // colCMND
             // 
+            this.colCMND.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colCMND.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colCMND.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colCMND.AppearanceHeader.Options.UseBackColor = true;
+            this.colCMND.AppearanceHeader.Options.UseBorderColor = true;
+            this.colCMND.AppearanceHeader.Options.UseFont = true;
+            this.colCMND.AppearanceHeader.Options.UseForeColor = true;
+            this.colCMND.AppearanceHeader.Options.UseTextOptions = true;
+            this.colCMND.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colCMND.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colCMND.Caption = "CMND";
             this.colCMND.FieldName = "CMND";
             this.colCMND.MinWidth = 25;
             this.colCMND.Name = "colCMND";
@@ -291,6 +311,17 @@ namespace NGANHANG_
             // 
             // colSODU
             // 
+            this.colSODU.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSODU.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSODU.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSODU.AppearanceHeader.Options.UseBackColor = true;
+            this.colSODU.AppearanceHeader.Options.UseBorderColor = true;
+            this.colSODU.AppearanceHeader.Options.UseFont = true;
+            this.colSODU.AppearanceHeader.Options.UseForeColor = true;
+            this.colSODU.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSODU.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSODU.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSODU.Caption = "Số dư";
             this.colSODU.DisplayFormat.FormatString = "##,#";
             this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.FieldName = "SODU";
@@ -302,6 +333,17 @@ namespace NGANHANG_
             // 
             // colMACN
             // 
+            this.colMACN.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMACN.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMACN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colMACN.AppearanceHeader.Options.UseBackColor = true;
+            this.colMACN.AppearanceHeader.Options.UseBorderColor = true;
+            this.colMACN.AppearanceHeader.Options.UseFont = true;
+            this.colMACN.AppearanceHeader.Options.UseForeColor = true;
+            this.colMACN.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMACN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMACN.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colMACN.Caption = "Mã Chi Nhánh";
             this.colMACN.FieldName = "MACN";
             this.colMACN.MinWidth = 25;
             this.colMACN.Name = "colMACN";
@@ -311,6 +353,17 @@ namespace NGANHANG_
             // 
             // colNGAYMOTK
             // 
+            this.colNGAYMOTK.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colNGAYMOTK.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colNGAYMOTK.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colNGAYMOTK.AppearanceHeader.Options.UseBackColor = true;
+            this.colNGAYMOTK.AppearanceHeader.Options.UseBorderColor = true;
+            this.colNGAYMOTK.AppearanceHeader.Options.UseFont = true;
+            this.colNGAYMOTK.AppearanceHeader.Options.UseForeColor = true;
+            this.colNGAYMOTK.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNGAYMOTK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNGAYMOTK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNGAYMOTK.Caption = "Ngày mở tài khoản";
             this.colNGAYMOTK.DisplayFormat.FormatString = "G";
             this.colNGAYMOTK.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYMOTK.FieldName = "NGAYMOTK";
@@ -476,6 +529,13 @@ namespace NGANHANG_
             // 
             // colSODUTRUOC
             // 
+            this.colSODUTRUOC.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSODUTRUOC.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSODUTRUOC.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSODUTRUOC.AppearanceHeader.Options.UseBackColor = true;
+            this.colSODUTRUOC.AppearanceHeader.Options.UseFont = true;
+            this.colSODUTRUOC.AppearanceHeader.Options.UseForeColor = true;
+            this.colSODUTRUOC.Caption = "Số dư trước";
             this.colSODUTRUOC.FieldName = "SODUTRUOC";
             this.colSODUTRUOC.MinWidth = 25;
             this.colSODUTRUOC.Name = "colSODUTRUOC";
@@ -485,6 +545,13 @@ namespace NGANHANG_
             // 
             // colLOAIGD
             // 
+            this.colLOAIGD.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colLOAIGD.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colLOAIGD.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colLOAIGD.AppearanceHeader.Options.UseBackColor = true;
+            this.colLOAIGD.AppearanceHeader.Options.UseFont = true;
+            this.colLOAIGD.AppearanceHeader.Options.UseForeColor = true;
+            this.colLOAIGD.Caption = "Loại GD";
             this.colLOAIGD.FieldName = "LOAIGD";
             this.colLOAIGD.MinWidth = 25;
             this.colLOAIGD.Name = "colLOAIGD";
@@ -494,6 +561,13 @@ namespace NGANHANG_
             // 
             // colMAGD
             // 
+            this.colMAGD.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMAGD.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMAGD.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colMAGD.AppearanceHeader.Options.UseBackColor = true;
+            this.colMAGD.AppearanceHeader.Options.UseFont = true;
+            this.colMAGD.AppearanceHeader.Options.UseForeColor = true;
+            this.colMAGD.Caption = "Mã GD";
             this.colMAGD.FieldName = "MAGD";
             this.colMAGD.MinWidth = 25;
             this.colMAGD.Name = "colMAGD";
@@ -503,6 +577,13 @@ namespace NGANHANG_
             // 
             // colSOTIEN
             // 
+            this.colSOTIEN.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSOTIEN.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSOTIEN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSOTIEN.AppearanceHeader.Options.UseBackColor = true;
+            this.colSOTIEN.AppearanceHeader.Options.UseFont = true;
+            this.colSOTIEN.AppearanceHeader.Options.UseForeColor = true;
+            this.colSOTIEN.Caption = "Số tiền";
             this.colSOTIEN.DisplayFormat.FormatString = "##,#";
             this.colSOTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSOTIEN.FieldName = "SOTIEN";
@@ -514,6 +595,13 @@ namespace NGANHANG_
             // 
             // colNGAYGD
             // 
+            this.colNGAYGD.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colNGAYGD.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colNGAYGD.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colNGAYGD.AppearanceHeader.Options.UseBackColor = true;
+            this.colNGAYGD.AppearanceHeader.Options.UseFont = true;
+            this.colNGAYGD.AppearanceHeader.Options.UseForeColor = true;
+            this.colNGAYGD.Caption = "Ngày GD";
             this.colNGAYGD.DisplayFormat.FormatString = "G";
             this.colNGAYGD.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYGD.FieldName = "NGAYGD";
@@ -525,6 +613,13 @@ namespace NGANHANG_
             // 
             // colSODUSAU
             // 
+            this.colSODUSAU.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSODUSAU.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSODUSAU.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSODUSAU.AppearanceHeader.Options.UseBackColor = true;
+            this.colSODUSAU.AppearanceHeader.Options.UseFont = true;
+            this.colSODUSAU.AppearanceHeader.Options.UseForeColor = true;
+            this.colSODUSAU.Caption = "Số dư sau";
             this.colSODUSAU.DisplayFormat.FormatString = "##,#";
             this.colSODUSAU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODUSAU.FieldName = "SODUSAU";
@@ -536,6 +631,13 @@ namespace NGANHANG_
             // 
             // colMANV
             // 
+            this.colMANV.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colMANV.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMANV.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colMANV.AppearanceHeader.Options.UseBackColor = true;
+            this.colMANV.AppearanceHeader.Options.UseFont = true;
+            this.colMANV.AppearanceHeader.Options.UseForeColor = true;
+            this.colMANV.Caption = "Mã NV";
             this.colMANV.FieldName = "MANV";
             this.colMANV.MinWidth = 25;
             this.colMANV.Name = "colMANV";
@@ -545,6 +647,13 @@ namespace NGANHANG_
             // 
             // colSOTKNHAN
             // 
+            this.colSOTKNHAN.AppearanceHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.colSOTKNHAN.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSOTKNHAN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSOTKNHAN.AppearanceHeader.Options.UseBackColor = true;
+            this.colSOTKNHAN.AppearanceHeader.Options.UseFont = true;
+            this.colSOTKNHAN.AppearanceHeader.Options.UseForeColor = true;
+            this.colSOTKNHAN.Caption = "Số TK nhận";
             this.colSOTKNHAN.FieldName = "SOTKNHAN";
             this.colSOTKNHAN.MinWidth = 25;
             this.colSOTKNHAN.Name = "colSOTKNHAN";
@@ -556,34 +665,11 @@ namespace NGANHANG_
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
-            // cmbChinhanh
-            // 
-            this.cmbChinhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbChinhanh.FormattingEnabled = true;
-            this.cmbChinhanh.Location = new System.Drawing.Point(647, 18);
-            this.cmbChinhanh.Name = "cmbChinhanh";
-            this.cmbChinhanh.Size = new System.Drawing.Size(170, 24);
-            this.cmbChinhanh.TabIndex = 16;
-            this.cmbChinhanh.Visible = false;
-            this.cmbChinhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChinhanh_SelectedIndexChanged);
-            // 
-            // lbChinhanh
-            // 
-            this.lbChinhanh.AutoSize = true;
-            this.lbChinhanh.Location = new System.Drawing.Point(503, 21);
-            this.lbChinhanh.Name = "lbChinhanh";
-            this.lbChinhanh.Size = new System.Drawing.Size(115, 17);
-            this.lbChinhanh.TabIndex = 17;
-            this.lbChinhanh.Text = "TÊN CHI NHÁNH";
-            this.lbChinhanh.Visible = false;
-            // 
             // frmGDGuiRut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 734);
-            this.Controls.Add(this.lbChinhanh);
-            this.Controls.Add(this.cmbChinhanh);
             this.Controls.Add(this.giaoDichGridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.taiKhoanGridControl);
@@ -662,7 +748,5 @@ namespace NGANHANG_
         private DevExpress.XtraEditors.TextEdit mANVTextEdit;
         private DevExpress.XtraEditors.TextEdit txtSoTK;
         private System.Windows.Forms.NumericUpDown txtSoTien;
-        private System.Windows.Forms.Label lbChinhanh;
-        private System.Windows.Forms.ComboBox cmbChinhanh;
     }
 }

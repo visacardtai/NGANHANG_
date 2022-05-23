@@ -144,6 +144,7 @@ namespace NGANHANG_
             // 
             // TopMargin
             // 
+            this.TopMargin.HeightF = 70F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -431,7 +432,7 @@ namespace NGANHANG_
             this.DataMember = "SP_LAY_DS_TK";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 312);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 70, 312);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.DetailCaption1,
