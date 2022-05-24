@@ -315,11 +315,19 @@ namespace NGANHANG_
                             break;
                     }
                     //lấy ra mã nhân viên lớn nhất ở site chủ: 
-                    int maNVLonNhat = layRaMaNhanvienLonNhatTaiSiteChu(); 
                     
+                    string manv_moi = "";
+                    if (frm.manv_new.Equals("") == false)
+                    {
+                        manv_moi = frm.manv_new; 
+                    }else
+                    {
+                        int maNVLonNhat = layRaMaNhanvienLonNhatTaiSiteChu();
+                        manv_moi = (maNVLonNhat + 1) < 100 ? ("MNV0" + (maNVLonNhat + 1)) : ("MNV" + (maNVLonNhat + 1)); 
+                    }
                     var status = Program.ExecSqlNonQuery("SP_CHUYEN_CN",
                                         new List<SqlParameter> { new SqlParameter("@MANV", manv.Trim()),
-                                                                new SqlParameter("@MANV2", (maNVLonNhat+1)<100?("MNV0"+(maNVLonNhat+1)) : ("MNV"+(maNVLonNhat+1))),
+                                                                new SqlParameter("@MANV2", manv_moi),
                                                                 new SqlParameter("@MACN", macn_new.Trim())},
                                         CommandType.StoredProcedure);
                     if (status == 2)

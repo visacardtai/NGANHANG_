@@ -99,7 +99,8 @@ namespace NGANHANG_
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
-            sOTKLabel.Location = new System.Drawing.Point(83, 55);
+            sOTKLabel.Location = new System.Drawing.Point(104, 69);
+            sOTKLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             sOTKLabel.Name = "sOTKLabel";
             sOTKLabel.Size = new System.Drawing.Size(98, 17);
             sOTKLabel.TabIndex = 0;
@@ -108,7 +109,8 @@ namespace NGANHANG_
             // mANVLabel
             // 
             mANVLabel.AutoSize = true;
-            mANVLabel.Location = new System.Drawing.Point(523, 59);
+            mANVLabel.Location = new System.Drawing.Point(654, 74);
+            mANVLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             mANVLabel.Name = "mANVLabel";
             mANVLabel.Size = new System.Drawing.Size(48, 17);
             mANVLabel.TabIndex = 8;
@@ -247,11 +249,13 @@ namespace NGANHANG_
             // 
             this.taiKhoanGridControl.DataSource = this.taiKhoanBindingSource;
             this.taiKhoanGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.taiKhoanGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 51);
             this.taiKhoanGridControl.MainView = this.gridView1;
+            this.taiKhoanGridControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taiKhoanGridControl.MenuManager = this.barManager1;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
-            this.taiKhoanGridControl.Size = new System.Drawing.Size(1447, 292);
+            this.taiKhoanGridControl.Size = new System.Drawing.Size(1447, 365);
             this.taiKhoanGridControl.TabIndex = 5;
             this.taiKhoanGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -265,6 +269,7 @@ namespace NGANHANG_
             this.colSODU,
             this.colMACN,
             this.colNGAYMOTK});
+            this.gridView1.DetailHeight = 437;
             this.gridView1.GridControl = this.taiKhoanGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -283,11 +288,11 @@ namespace NGANHANG_
             this.colSOTK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colSOTK.Caption = "Số tài khoản";
             this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.MinWidth = 25;
+            this.colSOTK.MinWidth = 31;
             this.colSOTK.Name = "colSOTK";
             this.colSOTK.Visible = true;
             this.colSOTK.VisibleIndex = 0;
-            this.colSOTK.Width = 94;
+            this.colSOTK.Width = 117;
             // 
             // colCMND
             // 
@@ -303,11 +308,11 @@ namespace NGANHANG_
             this.colCMND.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colCMND.Caption = "CMND";
             this.colCMND.FieldName = "CMND";
-            this.colCMND.MinWidth = 25;
+            this.colCMND.MinWidth = 31;
             this.colCMND.Name = "colCMND";
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 1;
-            this.colCMND.Width = 94;
+            this.colCMND.Width = 117;
             // 
             // colSODU
             // 
@@ -325,11 +330,11 @@ namespace NGANHANG_
             this.colSODU.DisplayFormat.FormatString = "##,#";
             this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.FieldName = "SODU";
-            this.colSODU.MinWidth = 25;
+            this.colSODU.MinWidth = 31;
             this.colSODU.Name = "colSODU";
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 2;
-            this.colSODU.Width = 94;
+            this.colSODU.Width = 117;
             // 
             // colMACN
             // 
@@ -345,11 +350,11 @@ namespace NGANHANG_
             this.colMACN.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colMACN.Caption = "Mã Chi Nhánh";
             this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 25;
+            this.colMACN.MinWidth = 31;
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
-            this.colMACN.Width = 94;
+            this.colMACN.Width = 117;
             // 
             // colNGAYMOTK
             // 
@@ -367,11 +372,11 @@ namespace NGANHANG_
             this.colNGAYMOTK.DisplayFormat.FormatString = "G";
             this.colNGAYMOTK.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYMOTK.FieldName = "NGAYMOTK";
-            this.colNGAYMOTK.MinWidth = 25;
+            this.colNGAYMOTK.MinWidth = 31;
             this.colNGAYMOTK.Name = "colNGAYMOTK";
             this.colNGAYMOTK.Visible = true;
             this.colNGAYMOTK.VisibleIndex = 4;
-            this.colNGAYMOTK.Width = 94;
+            this.colNGAYMOTK.Width = 117;
             // 
             // panelControl1
             // 
@@ -386,14 +391,16 @@ namespace NGANHANG_
             this.panelControl1.Controls.Add(this.cmbLoaiGD);
             this.panelControl1.Controls.Add(sOTKLabel);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 343);
+            this.panelControl1.Location = new System.Drawing.Point(0, 416);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(761, 371);
+            this.panelControl1.Size = new System.Drawing.Size(951, 298);
             this.panelControl1.TabIndex = 6;
             // 
             // txtSoTien
             // 
-            this.txtSoTien.Location = new System.Drawing.Point(192, 192);
+            this.txtSoTien.Location = new System.Drawing.Point(240, 240);
+            this.txtSoTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoTien.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -405,7 +412,7 @@ namespace NGANHANG_
             0,
             0});
             this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Size = new System.Drawing.Size(249, 23);
+            this.txtSoTien.Size = new System.Drawing.Size(311, 23);
             this.txtSoTien.TabIndex = 11;
             this.txtSoTien.ThousandsSeparator = true;
             this.txtSoTien.Value = new decimal(new int[] {
@@ -418,20 +425,22 @@ namespace NGANHANG_
             // 
             this.txtSoTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.taiKhoanBindingSource, "SOTK", true));
             this.txtSoTK.Enabled = false;
-            this.txtSoTK.Location = new System.Drawing.Point(192, 49);
+            this.txtSoTK.Location = new System.Drawing.Point(240, 61);
+            this.txtSoTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoTK.MenuManager = this.barManager1;
             this.txtSoTK.Name = "txtSoTK";
-            this.txtSoTK.Size = new System.Drawing.Size(249, 22);
+            this.txtSoTK.Size = new System.Drawing.Size(311, 22);
             this.txtSoTK.TabIndex = 10;
             // 
             // mANVTextEdit
             // 
             this.mANVTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "MANV", true));
             this.mANVTextEdit.Enabled = false;
-            this.mANVTextEdit.Location = new System.Drawing.Point(594, 56);
+            this.mANVTextEdit.Location = new System.Drawing.Point(742, 70);
+            this.mANVTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mANVTextEdit.MenuManager = this.barManager1;
             this.mANVTextEdit.Name = "mANVTextEdit";
-            this.mANVTextEdit.Size = new System.Drawing.Size(125, 22);
+            this.mANVTextEdit.Size = new System.Drawing.Size(156, 22);
             this.mANVTextEdit.TabIndex = 9;
             // 
             // nhanVienBindingSource
@@ -441,9 +450,11 @@ namespace NGANHANG_
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(409, 253);
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuy.Location = new System.Drawing.Point(511, 316);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(145, 36);
+            this.btnHuy.Size = new System.Drawing.Size(181, 45);
             this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "HỦY GIAO DỊCH";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -451,9 +462,11 @@ namespace NGANHANG_
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(103, 253);
+            this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXacNhan.Location = new System.Drawing.Point(129, 316);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(168, 36);
+            this.btnXacNhan.Size = new System.Drawing.Size(210, 45);
             this.btnXacNhan.TabIndex = 6;
             this.btnXacNhan.Text = "XÁC NHẬN";
             this.btnXacNhan.UseVisualStyleBackColor = true;
@@ -462,7 +475,8 @@ namespace NGANHANG_
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 194);
+            this.label2.Location = new System.Drawing.Point(125, 242);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 5;
@@ -471,7 +485,8 @@ namespace NGANHANG_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 130);
+            this.label1.Location = new System.Drawing.Point(91, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 17);
             this.label1.TabIndex = 4;
@@ -484,9 +499,10 @@ namespace NGANHANG_
             this.cmbLoaiGD.Items.AddRange(new object[] {
             "Gởi tiền",
             "Rút tiền"});
-            this.cmbLoaiGD.Location = new System.Drawing.Point(192, 123);
+            this.cmbLoaiGD.Location = new System.Drawing.Point(240, 154);
+            this.cmbLoaiGD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLoaiGD.Name = "cmbLoaiGD";
-            this.cmbLoaiGD.Size = new System.Drawing.Size(249, 24);
+            this.cmbLoaiGD.Size = new System.Drawing.Size(310, 24);
             this.cmbLoaiGD.TabIndex = 3;
             this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
             // 
@@ -503,11 +519,13 @@ namespace NGANHANG_
             // 
             this.giaoDichGridControl.DataSource = this.giaoDichBindingSource;
             this.giaoDichGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.giaoDichGridControl.Location = new System.Drawing.Point(761, 343);
+            this.giaoDichGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.giaoDichGridControl.Location = new System.Drawing.Point(951, 416);
             this.giaoDichGridControl.MainView = this.gridView2;
+            this.giaoDichGridControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.giaoDichGridControl.MenuManager = this.barManager1;
             this.giaoDichGridControl.Name = "giaoDichGridControl";
-            this.giaoDichGridControl.Size = new System.Drawing.Size(686, 371);
+            this.giaoDichGridControl.Size = new System.Drawing.Size(496, 298);
             this.giaoDichGridControl.TabIndex = 11;
             this.giaoDichGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -523,6 +541,7 @@ namespace NGANHANG_
             this.colSODUSAU,
             this.colMANV,
             this.colSOTKNHAN});
+            this.gridView2.DetailHeight = 437;
             this.gridView2.GridControl = this.giaoDichGridControl;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -537,11 +556,11 @@ namespace NGANHANG_
             this.colSODUTRUOC.AppearanceHeader.Options.UseForeColor = true;
             this.colSODUTRUOC.Caption = "Số dư trước";
             this.colSODUTRUOC.FieldName = "SODUTRUOC";
-            this.colSODUTRUOC.MinWidth = 25;
+            this.colSODUTRUOC.MinWidth = 31;
             this.colSODUTRUOC.Name = "colSODUTRUOC";
             this.colSODUTRUOC.Visible = true;
             this.colSODUTRUOC.VisibleIndex = 0;
-            this.colSODUTRUOC.Width = 94;
+            this.colSODUTRUOC.Width = 117;
             // 
             // colLOAIGD
             // 
@@ -553,11 +572,11 @@ namespace NGANHANG_
             this.colLOAIGD.AppearanceHeader.Options.UseForeColor = true;
             this.colLOAIGD.Caption = "Loại GD";
             this.colLOAIGD.FieldName = "LOAIGD";
-            this.colLOAIGD.MinWidth = 25;
+            this.colLOAIGD.MinWidth = 31;
             this.colLOAIGD.Name = "colLOAIGD";
             this.colLOAIGD.Visible = true;
             this.colLOAIGD.VisibleIndex = 1;
-            this.colLOAIGD.Width = 94;
+            this.colLOAIGD.Width = 117;
             // 
             // colMAGD
             // 
@@ -569,11 +588,11 @@ namespace NGANHANG_
             this.colMAGD.AppearanceHeader.Options.UseForeColor = true;
             this.colMAGD.Caption = "Mã GD";
             this.colMAGD.FieldName = "MAGD";
-            this.colMAGD.MinWidth = 25;
+            this.colMAGD.MinWidth = 31;
             this.colMAGD.Name = "colMAGD";
             this.colMAGD.Visible = true;
             this.colMAGD.VisibleIndex = 2;
-            this.colMAGD.Width = 94;
+            this.colMAGD.Width = 117;
             // 
             // colSOTIEN
             // 
@@ -587,11 +606,11 @@ namespace NGANHANG_
             this.colSOTIEN.DisplayFormat.FormatString = "##,#";
             this.colSOTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSOTIEN.FieldName = "SOTIEN";
-            this.colSOTIEN.MinWidth = 25;
+            this.colSOTIEN.MinWidth = 31;
             this.colSOTIEN.Name = "colSOTIEN";
             this.colSOTIEN.Visible = true;
             this.colSOTIEN.VisibleIndex = 3;
-            this.colSOTIEN.Width = 94;
+            this.colSOTIEN.Width = 117;
             // 
             // colNGAYGD
             // 
@@ -605,11 +624,11 @@ namespace NGANHANG_
             this.colNGAYGD.DisplayFormat.FormatString = "G";
             this.colNGAYGD.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNGAYGD.FieldName = "NGAYGD";
-            this.colNGAYGD.MinWidth = 25;
+            this.colNGAYGD.MinWidth = 31;
             this.colNGAYGD.Name = "colNGAYGD";
             this.colNGAYGD.Visible = true;
             this.colNGAYGD.VisibleIndex = 4;
-            this.colNGAYGD.Width = 94;
+            this.colNGAYGD.Width = 117;
             // 
             // colSODUSAU
             // 
@@ -623,11 +642,11 @@ namespace NGANHANG_
             this.colSODUSAU.DisplayFormat.FormatString = "##,#";
             this.colSODUSAU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODUSAU.FieldName = "SODUSAU";
-            this.colSODUSAU.MinWidth = 25;
+            this.colSODUSAU.MinWidth = 31;
             this.colSODUSAU.Name = "colSODUSAU";
             this.colSODUSAU.Visible = true;
             this.colSODUSAU.VisibleIndex = 5;
-            this.colSODUSAU.Width = 94;
+            this.colSODUSAU.Width = 117;
             // 
             // colMANV
             // 
@@ -639,11 +658,11 @@ namespace NGANHANG_
             this.colMANV.AppearanceHeader.Options.UseForeColor = true;
             this.colMANV.Caption = "Mã NV";
             this.colMANV.FieldName = "MANV";
-            this.colMANV.MinWidth = 25;
+            this.colMANV.MinWidth = 31;
             this.colMANV.Name = "colMANV";
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 6;
-            this.colMANV.Width = 94;
+            this.colMANV.Width = 117;
             // 
             // colSOTKNHAN
             // 
@@ -655,11 +674,11 @@ namespace NGANHANG_
             this.colSOTKNHAN.AppearanceHeader.Options.UseForeColor = true;
             this.colSOTKNHAN.Caption = "Số TK nhận";
             this.colSOTKNHAN.FieldName = "SOTKNHAN";
-            this.colSOTKNHAN.MinWidth = 25;
+            this.colSOTKNHAN.MinWidth = 31;
             this.colSOTKNHAN.Name = "colSOTKNHAN";
             this.colSOTKNHAN.Visible = true;
             this.colSOTKNHAN.VisibleIndex = 7;
-            this.colSOTKNHAN.Width = 94;
+            this.colSOTKNHAN.Width = 117;
             // 
             // nhanVienTableAdapter
             // 
@@ -678,7 +697,7 @@ namespace NGANHANG_
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmGDGuiRut";
-            this.Text = "frmGDGuiRut";
+            this.Text = "Giao dịch gửi rút";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGDGuiRut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

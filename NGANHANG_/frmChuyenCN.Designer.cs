@@ -60,6 +60,7 @@ namespace NGANHANG_
             // 
             // cbChinhanh
             // 
+            this.cbChinhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChinhanh.FormattingEnabled = true;
             this.cbChinhanh.Location = new System.Drawing.Point(306, 181);
             this.cbChinhanh.Name = "cbChinhanh";
@@ -98,7 +99,7 @@ namespace NGANHANG_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmChuyenCN";
-            this.Text = "frmChuyenCN";
+            this.Text = "Chuyển chi nhánh";
             this.Load += new System.EventHandler(this.frmChuyenCN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

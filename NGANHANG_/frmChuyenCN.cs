@@ -35,12 +35,39 @@ namespace NGANHANG_
             {
                 lbThongbao.Text = "Nhân viên hiện đang thuộc chi nhánh này.";
                 lbThongbao.Visible = true;
+                btnVerify.Enabled = false; 
                 return;
+            }
+            btnVerify.Enabled = true; 
+            lbThongbao.Visible = false;
+            switch (cbChinhanh.SelectedIndex)
+            {
+                case 0:
+                    macn = "BENTHANH";
+                    break;
+                case 1:
+                    macn = "TANDINH";
+                    break;
+            }
+            
+            if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
+            SqlDataReader sqlDataReader;
+            sqlDataReader = Program.ExecSqlDataReader("SP_TIM_NV_TRONG_CN_KHAC",
+                            new List<SqlParameter> { new SqlParameter("@DIACHI", diachi),
+                                                    new SqlParameter("@SODT", sodt),
+                                                    new SqlParameter("@MACN", macn)},
+                            CommandType.StoredProcedure);
+            if (sqlDataReader.Read())
+            {
+
+                manv_new = sqlDataReader.GetString(0);
             }
             else
             {
-                lbThongbao.Visible = false;
+                manv_new = ""; 
             }
+            sqlDataReader.Close();
+
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
