@@ -45,6 +45,7 @@ namespace NGANHANG_
             this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -68,7 +69,7 @@ namespace NGANHANG_
             this.hScrollBar1 = new DevExpress.XtraEditors.HScrollBar();
             this.gD_CHUYENTIENTableAdapter = new NGANHANG_.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lbthongbaonv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -85,10 +86,10 @@ namespace NGANHANG_
             // 
             this.cmbChinhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChinhanh.FormattingEnabled = true;
-            this.cmbChinhanh.Location = new System.Drawing.Point(267, 45);
-            this.cmbChinhanh.Margin = new System.Windows.Forms.Padding(6);
+            this.cmbChinhanh.Location = new System.Drawing.Point(334, 56);
+            this.cmbChinhanh.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.cmbChinhanh.Name = "cmbChinhanh";
-            this.cmbChinhanh.Size = new System.Drawing.Size(674, 24);
+            this.cmbChinhanh.Size = new System.Drawing.Size(842, 24);
             this.cmbChinhanh.TabIndex = 1;
             this.cmbChinhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChinhanh_SelectedIndexChanged);
             this.cmbChinhanh.Click += new System.EventHandler(this.cmbChinhanh_SelectedIndexChanged);
@@ -121,13 +122,13 @@ namespace NGANHANG_
             // 
             this.nhanVienGridControl.DataSource = this.nhanVienBindingSource;
             this.nhanVienGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nhanVienGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            this.nhanVienGridControl.Location = new System.Drawing.Point(0, 173);
+            this.nhanVienGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.nhanVienGridControl.Location = new System.Drawing.Point(0, 203);
             this.nhanVienGridControl.MainView = this.gridView1;
-            this.nhanVienGridControl.Margin = new System.Windows.Forms.Padding(6);
+            this.nhanVienGridControl.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.nhanVienGridControl.MenuManager = this.barManager1;
             this.nhanVienGridControl.Name = "nhanVienGridControl";
-            this.nhanVienGridControl.Size = new System.Drawing.Size(1426, 364);
+            this.nhanVienGridControl.Size = new System.Drawing.Size(1426, 421);
             this.nhanVienGridControl.TabIndex = 34;
             this.nhanVienGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -144,7 +145,7 @@ namespace NGANHANG_
             this.colSODT,
             this.colMACN,
             this.colTrangThaiXoa});
-            this.gridView1.DetailHeight = 682;
+            this.gridView1.DetailHeight = 852;
             this.gridView1.GridControl = this.nhanVienGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.gridView1_ShowingEditor);
@@ -153,67 +154,139 @@ namespace NGANHANG_
             // 
             // colMANV
             // 
+            this.colMANV.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colMANV.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colMANV.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMANV.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colMANV.AppearanceHeader.Options.UseBackColor = true;
+            this.colMANV.AppearanceHeader.Options.UseFont = true;
+            this.colMANV.AppearanceHeader.Options.UseForeColor = true;
+            this.colMANV.Caption = "Mã Nhân Viên";
             this.colMANV.FieldName = "MANV";
-            this.colMANV.MinWidth = 25;
+            this.colMANV.MinWidth = 31;
             this.colMANV.Name = "colMANV";
+            this.colMANV.OptionsColumn.AllowEdit = false;
+            this.colMANV.OptionsColumn.ShowInExpressionEditor = false;
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 0;
-            this.colMANV.Width = 94;
+            this.colMANV.Width = 117;
             // 
             // colHO
             // 
+            this.colHO.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colHO.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colHO.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colHO.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colHO.AppearanceHeader.Options.UseBackColor = true;
+            this.colHO.AppearanceHeader.Options.UseFont = true;
+            this.colHO.AppearanceHeader.Options.UseForeColor = true;
+            this.colHO.Caption = "Họ";
             this.colHO.FieldName = "HO";
-            this.colHO.MinWidth = 25;
+            this.colHO.MinWidth = 31;
             this.colHO.Name = "colHO";
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
-            this.colHO.Width = 94;
+            this.colHO.Width = 117;
             // 
             // colTEN
             // 
+            this.colTEN.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colTEN.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colTEN.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colTEN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colTEN.AppearanceHeader.Options.UseBackColor = true;
+            this.colTEN.AppearanceHeader.Options.UseFont = true;
+            this.colTEN.AppearanceHeader.Options.UseForeColor = true;
+            this.colTEN.Caption = "Tên";
             this.colTEN.FieldName = "TEN";
-            this.colTEN.MinWidth = 25;
+            this.colTEN.MinWidth = 31;
             this.colTEN.Name = "colTEN";
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
-            this.colTEN.Width = 94;
+            this.colTEN.Width = 117;
             // 
             // colDIACHI
             // 
+            this.colDIACHI.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colDIACHI.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colDIACHI.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colDIACHI.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colDIACHI.AppearanceHeader.Options.UseBackColor = true;
+            this.colDIACHI.AppearanceHeader.Options.UseFont = true;
+            this.colDIACHI.AppearanceHeader.Options.UseForeColor = true;
+            this.colDIACHI.Caption = "Địa Chỉ";
             this.colDIACHI.FieldName = "DIACHI";
-            this.colDIACHI.MinWidth = 25;
+            this.colDIACHI.MinWidth = 31;
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 3;
-            this.colDIACHI.Width = 94;
+            this.colDIACHI.Width = 117;
             // 
             // colPHAI
             // 
+            this.colPHAI.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colPHAI.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colPHAI.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colPHAI.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colPHAI.AppearanceHeader.Options.UseBackColor = true;
+            this.colPHAI.AppearanceHeader.Options.UseFont = true;
+            this.colPHAI.AppearanceHeader.Options.UseForeColor = true;
+            this.colPHAI.Caption = "Phái";
             this.colPHAI.FieldName = "PHAI";
-            this.colPHAI.MinWidth = 25;
+            this.colPHAI.MinWidth = 31;
             this.colPHAI.Name = "colPHAI";
             this.colPHAI.Visible = true;
             this.colPHAI.VisibleIndex = 4;
-            this.colPHAI.Width = 94;
+            this.colPHAI.Width = 117;
             // 
             // colSODT
             // 
+            this.colSODT.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colSODT.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colSODT.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colSODT.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colSODT.AppearanceHeader.Options.UseBackColor = true;
+            this.colSODT.AppearanceHeader.Options.UseFont = true;
+            this.colSODT.AppearanceHeader.Options.UseForeColor = true;
+            this.colSODT.Caption = "Số DT";
             this.colSODT.FieldName = "SODT";
-            this.colSODT.MinWidth = 25;
+            this.colSODT.MinWidth = 31;
             this.colSODT.Name = "colSODT";
             this.colSODT.Visible = true;
             this.colSODT.VisibleIndex = 5;
-            this.colSODT.Width = 94;
+            this.colSODT.Width = 117;
             // 
             // colMACN
             // 
+            this.colMACN.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colMACN.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colMACN.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMACN.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colMACN.AppearanceHeader.Options.UseBackColor = true;
+            this.colMACN.AppearanceHeader.Options.UseFont = true;
+            this.colMACN.AppearanceHeader.Options.UseForeColor = true;
+            this.colMACN.Caption = "Mã Chi Nhánh";
             this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 25;
+            this.colMACN.MinWidth = 31;
             this.colMACN.Name = "colMACN";
             this.colMACN.OptionsColumn.AllowEdit = false;
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 6;
-            this.colMACN.Width = 94;
+            this.colMACN.Width = 117;
+            // 
+            // colTrangThaiXoa
+            // 
+            this.colTrangThaiXoa.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.colTrangThaiXoa.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colTrangThaiXoa.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colTrangThaiXoa.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.colTrangThaiXoa.AppearanceHeader.Options.UseBackColor = true;
+            this.colTrangThaiXoa.AppearanceHeader.Options.UseFont = true;
+            this.colTrangThaiXoa.AppearanceHeader.Options.UseForeColor = true;
+            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
+            this.colTrangThaiXoa.MinWidth = 31;
+            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
+            this.colTrangThaiXoa.Width = 117;
             // 
             // barManager1
             // 
@@ -344,7 +417,7 @@ namespace NGANHANG_
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 537);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 624);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1426, 20);
             // 
@@ -354,7 +427,7 @@ namespace NGANHANG_
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 573);
             // 
             // barDockControlRight
             // 
@@ -362,15 +435,15 @@ namespace NGANHANG_
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1426, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 573);
             // 
             // panelThongtin
             // 
             this.panelThongtin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelThongtin.Location = new System.Drawing.Point(0, 173);
-            this.panelThongtin.Margin = new System.Windows.Forms.Padding(6);
+            this.panelThongtin.Location = new System.Drawing.Point(0, 203);
+            this.panelThongtin.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.panelThongtin.Name = "panelThongtin";
-            this.panelThongtin.Size = new System.Drawing.Size(1426, 364);
+            this.panelThongtin.Size = new System.Drawing.Size(1426, 421);
             this.panelThongtin.TabIndex = 35;
             // 
             // gD_GOIRUTBindingSource
@@ -391,8 +464,8 @@ namespace NGANHANG_
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(145, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(181, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 19);
             this.label1.TabIndex = 0;
@@ -411,27 +484,34 @@ namespace NGANHANG_
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.lbthongbaonv);
             this.panelControl1.Controls.Add(this.cmbChinhanh);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 51);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1426, 122);
+            this.panelControl1.Size = new System.Drawing.Size(1426, 152);
             this.panelControl1.TabIndex = 33;
             // 
-            // colTrangThaiXoa
+            // lbthongbaonv
             // 
-            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
-            this.colTrangThaiXoa.MinWidth = 25;
-            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
-            this.colTrangThaiXoa.Width = 94;
+            this.lbthongbaonv.AutoSize = true;
+            this.lbthongbaonv.Font = new System.Drawing.Font("Tahoma", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbthongbaonv.ForeColor = System.Drawing.Color.Red;
+            this.lbthongbaonv.Location = new System.Drawing.Point(1414, 119);
+            this.lbthongbaonv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbthongbaonv.Name = "lbthongbaonv";
+            this.lbthongbaonv.Size = new System.Drawing.Size(520, 21);
+            this.lbthongbaonv.TabIndex = 2;
+            this.lbthongbaonv.Text = "Thông báo: Nhân viên không còn làm việc tại chi nhánh này";
+            this.lbthongbaonv.Visible = false;
             // 
             // frmNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 557);
+            this.ClientSize = new System.Drawing.Size(1426, 644);
             this.Controls.Add(this.nhanVienGridControl);
             this.Controls.Add(this.panelThongtin);
             this.Controls.Add(this.hScrollBar1);
@@ -441,7 +521,7 @@ namespace NGANHANG_
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmNV";
-            this.Text = "frmNV";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
@@ -499,5 +579,6 @@ namespace NGANHANG_
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
+        private System.Windows.Forms.Label lbthongbaonv;
     }
 }
