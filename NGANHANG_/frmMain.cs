@@ -103,5 +103,17 @@ namespace NGANHANG_
                 fmNV.Show();
             }
         }
+
+        private void btnKHKH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FrptDanhSachKhachHang));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FrptDanhSachKhachHang fmNV = new FrptDanhSachKhachHang();
+                fmNV.MdiParent = this;
+                fmNV.Show();
+            }
+        }
     }
 }

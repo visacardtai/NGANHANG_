@@ -73,25 +73,25 @@ namespace NGANHANG_
 
         private void btnVerify_Click(object sender, EventArgs e)
         {
-            //if (manv_new == "" && (manv_new = txtManv.Text.Trim()) == "")
-            //{
-            //    if (txtManv.Visible == true) MessageBox.Show("Vui lòng điền mã nhân viên mới");
-            //    return;
-            //}
-            //if (txtManv.Visible == true)
-            //{
-            //    SqlDataReader sqlDataReader = Program.ExecSqlDataReader("sp_tim_nv",
-            //                                        new List<SqlParameter> { new SqlParameter("@MANV", manv_new) },
-            //                                        CommandType.StoredProcedure);
-            //    if (sqlDataReader.Read())
-            //    {
-            //        MessageBox.Show("Mã nhân viên đã tồn tại");
-            //        manv_new = "";
-            //        sqlDataReader.Close();
-            //        return;
-            //    }
-            //    sqlDataReader.Close();
-            //}
+           /* if (manv_new == "" && (manv_new = txtManv.Text.Trim()) == "")
+            {
+                if (txtManv.Visible == true) MessageBox.Show("Vui lòng điền mã nhân viên mới");
+                return;
+            }
+            if (txtManv.Visible == true)
+            {
+                SqlDataReader sqlDataReader = Program.ExecSqlDataReader("sp_tim_nv",
+                                                    new List<SqlParameter> { new SqlParameter("@MANV", manv_new) },
+                                                    CommandType.StoredProcedure);
+                if (sqlDataReader.Read())
+                {
+                    MessageBox.Show("Mã nhân viên đã tồn tại");
+                    manv_new = "";
+                    sqlDataReader.Close();
+                    return;
+                }
+                sqlDataReader.Close();
+            }*/
             this.DialogResult = DialogResult.OK;
             selectedIndex = cbChinhanh.SelectedIndex;
         }

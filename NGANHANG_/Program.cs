@@ -13,7 +13,7 @@ namespace NGANHANG_
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static String server_publisher = "LAPTOP-6A02SPAJ";
+        public static String server_publisher = "TIEN-TAI\\TRUSO";
         public static String servername = "";
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
@@ -122,7 +122,6 @@ namespace NGANHANG_
             try
             {
                 return (int)cmd.ExecuteScalar();
-                conn.Close();
             }
             catch (SqlException e)
             {

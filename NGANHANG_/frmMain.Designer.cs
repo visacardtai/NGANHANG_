@@ -200,6 +200,7 @@ namespace NGANHANG_
             this.btnKHKH.Id = 13;
             this.btnKHKH.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKHKH.ImageOptions.SvgImage")));
             this.btnKHKH.Name = "btnKHKH";
+            this.btnKHKH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKHKH_ItemClick);
             // 
             // pgHTTK
             // 
@@ -298,7 +299,7 @@ namespace NGANHANG_
             this.barButtonItem14,
             this.barWorkspaceMenuItem1});
             this.ribbonControl2.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ribbonControl2.MaxItemId = 25;
             this.ribbonControl2.Name = "ribbonControl2";
             this.ribbonControl2.OptionsMenuMinWidth = 495;
