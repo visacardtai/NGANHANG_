@@ -31,6 +31,7 @@ namespace NGANHANG_
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XrptDanhSachKhachHang));
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -62,7 +63,7 @@ namespace NGANHANG_
             this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xlbTenNV = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xlbNhom = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
@@ -70,9 +71,13 @@ namespace NGANHANG_
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "tien-tai\\chinhanh1.NGANHANG.dbo";
+            this.sqlDataSource1.ConnectionName = "NGANHANG_.Properties.Settings.NGANHANGConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "SP_LAY_DS_KH";
+            queryParameter1.Name = "@MACN";
+            queryParameter1.Type = typeof(string);
+            queryParameter1.ValueInfo = "TANDINH";
+            storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.StoredProcName = "SP_LAY_DS_KH";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -145,11 +150,11 @@ namespace NGANHANG_
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xlbNhom,
-            this.xrLabel2,
+            this.xrLabel3,
             this.xlbTenNV,
             this.xrLabel1,
             this.lbTieuDe});
-            this.ReportHeader.HeightF = 144.1667F;
+            this.ReportHeader.HeightF = 135F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // GroupHeader1
@@ -186,7 +191,7 @@ namespace NGANHANG_
             // 
             // lbTieuDe
             // 
-            this.lbTieuDe.LocationFloat = new DevExpress.Utils.PointFloat(5F, 0F);
+            this.lbTieuDe.LocationFloat = new DevExpress.Utils.PointFloat(5F, 5F);
             this.lbTieuDe.Name = "lbTieuDe";
             this.lbTieuDe.SizeF = new System.Drawing.SizeF(640F, 24.19433F);
             this.lbTieuDe.StyleName = "Title";
@@ -335,45 +340,51 @@ namespace NGANHANG_
             // xrLabel1
             // 
             this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(67.5F, 50.16668F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(10F, 66.83334F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(133.3333F, 27.16668F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(117.274F, 23F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Họ Tên Nhân Viên :";
+            this.xrLabel1.Text = "Tên nhân viên :";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xlbTenNV
             // 
-            this.xlbTenNV.LocationFloat = new DevExpress.Utils.PointFloat(220F, 54.33334F);
+            this.xlbTenNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xlbTenNV.LocationFloat = new DevExpress.Utils.PointFloat(127.274F, 66.83334F);
             this.xlbTenNV.Multiline = true;
             this.xlbTenNV.Name = "xlbTenNV";
             this.xlbTenNV.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xlbTenNV.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xlbTenNV.Text = ".......";
+            this.xlbTenNV.StylePriority.UseFont = false;
+            this.xlbTenNV.StylePriority.UseTextAlignment = false;
+            this.xlbTenNV.Text = "xlbTenNV";
+            this.xlbTenNV.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel2
+            // xrLabel3
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(380.3464F, 54.33334F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Nhóm :";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(416.6667F, 66.83334F);
+            this.xrLabel3.Multiline = true;
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "Nhóm :";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xlbNhom
             // 
-            this.xlbNhom.LocationFloat = new DevExpress.Utils.PointFloat(480.3465F, 54.33334F);
+            this.xlbNhom.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xlbNhom.LocationFloat = new DevExpress.Utils.PointFloat(516.6667F, 66.83334F);
             this.xlbNhom.Multiline = true;
             this.xlbNhom.Name = "xlbNhom";
             this.xlbNhom.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xlbNhom.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xlbNhom.StylePriority.UseFont = false;
             this.xlbNhom.StylePriority.UseTextAlignment = false;
             this.xlbNhom.Text = "xlbNhom";
             this.xlbNhom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -417,6 +428,8 @@ namespace NGANHANG_
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
         private DevExpress.XtraReports.UI.XRTable table1;
         private DevExpress.XtraReports.UI.XRTableRow tableRow1;
@@ -433,10 +446,8 @@ namespace NGANHANG_
         private DevExpress.XtraReports.UI.XRTableCell tableCell8;
         private DevExpress.XtraReports.UI.XRTableCell tableCell9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell10;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        public DevExpress.XtraReports.UI.XRLabel lbTieuDe;
         public DevExpress.XtraReports.UI.XRLabel xlbNhom;
         public DevExpress.XtraReports.UI.XRLabel xlbTenNV;
+        public DevExpress.XtraReports.UI.XRLabel lbTieuDe;
     }
 }

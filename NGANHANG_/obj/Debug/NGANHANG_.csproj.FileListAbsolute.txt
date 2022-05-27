@@ -399,3 +399,7 @@ F:\Programming Language\C++\NGANHANG_\NGANHANG_\bin\Debug\de\DevExpress.Diagram.
 F:\Programming Language\C++\NGANHANG_\NGANHANG_\bin\Debug\es\DevExpress.Diagram.v20.1.Core.resources.dll
 F:\Programming Language\C++\NGANHANG_\NGANHANG_\bin\Debug\ja\DevExpress.Diagram.v20.1.Core.resources.dll
 F:\Programming Language\C++\NGANHANG_\NGANHANG_\bin\Debug\ru\DevExpress.Diagram.v20.1.Core.resources.dll
+F:\Programming Language\C++\NGANHANG_\NGANHANG_\obj\Debug\NGANHANG_.frptLietKeDanhSachTaiKhoan.resources
+F:\Programming Language\C++\NGANHANG_\NGANHANG_\obj\Debug\NGANHANG_.XrptLietKeDanhSachTaiKhoan.resources
+F:\Programming Language\C++\NGANHANG_\NGANHANG_\obj\Debug\NGANHANG_.frmUser.resources
+F:\Programming Language\C++\NGANHANG_\NGANHANG_\obj\Debug\NGANHANG_.frmChuyenTien.resources

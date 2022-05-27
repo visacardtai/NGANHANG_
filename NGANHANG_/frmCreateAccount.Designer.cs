@@ -107,26 +107,28 @@ namespace NGANHANG_
             // txtDRole
             // 
             this.txtDRole.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtDRole.Location = new System.Drawing.Point(240, 336);
+            this.txtDRole.Location = new System.Drawing.Point(213, 269);
+            this.txtDRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDRole.Name = "txtDRole";
             this.txtDRole.ReadOnly = true;
-            this.txtDRole.Size = new System.Drawing.Size(186, 27);
+            this.txtDRole.Size = new System.Drawing.Size(166, 23);
             this.txtDRole.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 339);
+            this.label5.Location = new System.Drawing.Point(96, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 19);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 11;
             this.label5.Text = "Quyền";
             // 
             // btnDExit
             // 
-            this.btnDExit.Location = new System.Drawing.Point(356, 472);
+            this.btnDExit.Location = new System.Drawing.Point(316, 378);
+            this.btnDExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDExit.Name = "btnDExit";
-            this.btnDExit.Size = new System.Drawing.Size(133, 43);
+            this.btnDExit.Size = new System.Drawing.Size(118, 34);
             this.btnDExit.TabIndex = 10;
             this.btnDExit.Text = "Hủy";
             this.btnDExit.UseVisualStyleBackColor = true;
@@ -134,9 +136,10 @@ namespace NGANHANG_
             // 
             // btnDCreate
             // 
-            this.btnDCreate.Location = new System.Drawing.Point(112, 472);
+            this.btnDCreate.Location = new System.Drawing.Point(100, 378);
+            this.btnDCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDCreate.Name = "btnDCreate";
-            this.btnDCreate.Size = new System.Drawing.Size(133, 43);
+            this.btnDCreate.Size = new System.Drawing.Size(118, 34);
             this.btnDCreate.TabIndex = 9;
             this.btnDCreate.Text = "Xác Nhận";
             this.btnDCreate.UseVisualStyleBackColor = true;
@@ -145,52 +148,55 @@ namespace NGANHANG_
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(103, 255);
+            this.label6.Location = new System.Drawing.Point(92, 204);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 19);
+            this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Người dùng";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(103, 180);
+            this.label7.Location = new System.Drawing.Point(92, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 19);
+            this.label7.Size = new System.Drawing.Size(65, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Mật Khẩu";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(103, 101);
+            this.label8.Location = new System.Drawing.Point(92, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 19);
+            this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tài Khoản";
             // 
             // txtDUser
             // 
             this.txtDUser.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtDUser.Location = new System.Drawing.Point(240, 254);
+            this.txtDUser.Location = new System.Drawing.Point(213, 203);
+            this.txtDUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDUser.Name = "txtDUser";
             this.txtDUser.ReadOnly = true;
-            this.txtDUser.Size = new System.Drawing.Size(186, 27);
+            this.txtDUser.Size = new System.Drawing.Size(166, 23);
             this.txtDUser.TabIndex = 3;
             // 
             // txtDPass
             // 
-            this.txtDPass.Location = new System.Drawing.Point(240, 177);
+            this.txtDPass.Location = new System.Drawing.Point(213, 142);
+            this.txtDPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDPass.Name = "txtDPass";
-            this.txtDPass.Size = new System.Drawing.Size(186, 27);
+            this.txtDPass.Size = new System.Drawing.Size(166, 23);
             this.txtDPass.TabIndex = 2;
             this.txtDPass.UseSystemPasswordChar = true;
             // 
             // txtDLogin
             // 
-            this.txtDLogin.Location = new System.Drawing.Point(240, 96);
+            this.txtDLogin.Location = new System.Drawing.Point(213, 77);
+            this.txtDLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDLogin.Name = "txtDLogin";
-            this.txtDLogin.Size = new System.Drawing.Size(186, 27);
+            this.txtDLogin.Size = new System.Drawing.Size(166, 23);
             this.txtDLogin.TabIndex = 1;
             // 
             // grcDelete
@@ -206,9 +212,10 @@ namespace NGANHANG_
             this.grcDelete.Controls.Add(this.txtDPass);
             this.grcDelete.Controls.Add(this.txtDLogin);
             this.grcDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grcDelete.Location = new System.Drawing.Point(808, 34);
+            this.grcDelete.Location = new System.Drawing.Point(718, 30);
+            this.grcDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcDelete.Name = "grcDelete";
-            this.grcDelete.Size = new System.Drawing.Size(558, 593);
+            this.grcDelete.Size = new System.Drawing.Size(496, 468);
             this.grcDelete.TabIndex = 6;
             this.grcDelete.Text = "XÓA TÀI KHOẢN ĐĂNG NHẬP";
             this.grcDelete.Visible = false;
@@ -236,9 +243,10 @@ namespace NGANHANG_
             this.grcCreate.Controls.Add(this.txtCPass);
             this.grcCreate.Controls.Add(this.txtCLogin);
             this.grcCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grcCreate.Location = new System.Drawing.Point(1366, 34);
+            this.grcCreate.Location = new System.Drawing.Point(1214, 30);
+            this.grcCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcCreate.Name = "grcCreate";
-            this.grcCreate.Size = new System.Drawing.Size(558, 593);
+            this.grcCreate.Size = new System.Drawing.Size(496, 468);
             this.grcCreate.TabIndex = 7;
             this.grcCreate.Text = "TẠO TÀI KHOẢN ĐĂNG NHẬP";
             // 
@@ -247,26 +255,28 @@ namespace NGANHANG_
             this.txtCRole.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtCRole.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtCRole.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCRole.Location = new System.Drawing.Point(240, 336);
+            this.txtCRole.Location = new System.Drawing.Point(213, 269);
+            this.txtCRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCRole.Name = "txtCRole";
             this.txtCRole.ReadOnly = true;
-            this.txtCRole.Size = new System.Drawing.Size(186, 27);
+            this.txtCRole.Size = new System.Drawing.Size(166, 23);
             this.txtCRole.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 339);
+            this.label1.Location = new System.Drawing.Point(96, 271);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 19);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Quyền";
             // 
             // btnCExit
             // 
-            this.btnCExit.Location = new System.Drawing.Point(356, 472);
+            this.btnCExit.Location = new System.Drawing.Point(316, 378);
+            this.btnCExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCExit.Name = "btnCExit";
-            this.btnCExit.Size = new System.Drawing.Size(133, 43);
+            this.btnCExit.Size = new System.Drawing.Size(118, 34);
             this.btnCExit.TabIndex = 10;
             this.btnCExit.Text = "Thoát";
             this.btnCExit.UseVisualStyleBackColor = true;
@@ -274,9 +284,10 @@ namespace NGANHANG_
             // 
             // btnCCreate
             // 
-            this.btnCCreate.Location = new System.Drawing.Point(112, 472);
+            this.btnCCreate.Location = new System.Drawing.Point(100, 378);
+            this.btnCCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCCreate.Name = "btnCCreate";
-            this.btnCCreate.Size = new System.Drawing.Size(133, 43);
+            this.btnCCreate.Size = new System.Drawing.Size(118, 34);
             this.btnCCreate.TabIndex = 9;
             this.btnCCreate.Text = "Tạo ";
             this.btnCCreate.UseVisualStyleBackColor = true;
@@ -285,27 +296,27 @@ namespace NGANHANG_
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 255);
+            this.label4.Location = new System.Drawing.Point(92, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 19);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Người dùng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 180);
+            this.label3.Location = new System.Drawing.Point(92, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 19);
+            this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mật Khẩu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 101);
+            this.label2.Location = new System.Drawing.Point(92, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 19);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tài Khoản";
             // 
@@ -314,83 +325,90 @@ namespace NGANHANG_
             this.txtCUser.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtCUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtCUser.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCUser.Location = new System.Drawing.Point(240, 254);
+            this.txtCUser.Location = new System.Drawing.Point(213, 203);
+            this.txtCUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCUser.Name = "txtCUser";
             this.txtCUser.ReadOnly = true;
-            this.txtCUser.Size = new System.Drawing.Size(186, 27);
+            this.txtCUser.Size = new System.Drawing.Size(166, 23);
             this.txtCUser.TabIndex = 3;
             // 
             // txtCPass
             // 
-            this.txtCPass.Location = new System.Drawing.Point(240, 177);
+            this.txtCPass.Location = new System.Drawing.Point(213, 142);
+            this.txtCPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCPass.Name = "txtCPass";
-            this.txtCPass.Size = new System.Drawing.Size(186, 27);
+            this.txtCPass.Size = new System.Drawing.Size(166, 23);
             this.txtCPass.TabIndex = 2;
             this.txtCPass.UseSystemPasswordChar = true;
             // 
             // txtCLogin
             // 
-            this.txtCLogin.Location = new System.Drawing.Point(240, 96);
+            this.txtCLogin.Location = new System.Drawing.Point(213, 77);
+            this.txtCLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCLogin.Name = "txtCLogin";
-            this.txtCLogin.Size = new System.Drawing.Size(186, 27);
+            this.txtCLogin.Size = new System.Drawing.Size(166, 23);
             this.txtCLogin.TabIndex = 1;
             // 
             // txtELogin
             // 
             this.txtELogin.BackColor = System.Drawing.SystemColors.Window;
-            this.txtELogin.Location = new System.Drawing.Point(243, 94);
+            this.txtELogin.Location = new System.Drawing.Point(216, 75);
+            this.txtELogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtELogin.Name = "txtELogin";
-            this.txtELogin.Size = new System.Drawing.Size(186, 27);
+            this.txtELogin.Size = new System.Drawing.Size(166, 23);
             this.txtELogin.TabIndex = 1;
             // 
             // txtEPassOld
             // 
-            this.txtEPassOld.Location = new System.Drawing.Point(243, 162);
+            this.txtEPassOld.Location = new System.Drawing.Point(216, 130);
+            this.txtEPassOld.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEPassOld.Name = "txtEPassOld";
-            this.txtEPassOld.Size = new System.Drawing.Size(186, 27);
+            this.txtEPassOld.Size = new System.Drawing.Size(166, 23);
             this.txtEPassOld.TabIndex = 2;
             // 
             // txtEUser
             // 
             this.txtEUser.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtEUser.Location = new System.Drawing.Point(243, 316);
+            this.txtEUser.Location = new System.Drawing.Point(216, 253);
+            this.txtEUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEUser.Name = "txtEUser";
             this.txtEUser.ReadOnly = true;
-            this.txtEUser.Size = new System.Drawing.Size(186, 27);
+            this.txtEUser.Size = new System.Drawing.Size(166, 23);
             this.txtEUser.TabIndex = 3;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(106, 99);
+            this.label12.Location = new System.Drawing.Point(94, 79);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 19);
+            this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 5;
             this.label12.Text = "Tài Khoản";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(106, 165);
+            this.label11.Location = new System.Drawing.Point(94, 132);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 19);
+            this.label11.Size = new System.Drawing.Size(86, 17);
             this.label11.TabIndex = 6;
             this.label11.Text = "Mật Khẩu Cũ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(106, 320);
+            this.label10.Location = new System.Drawing.Point(94, 256);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 19);
+            this.label10.Size = new System.Drawing.Size(80, 17);
             this.label10.TabIndex = 7;
             this.label10.Text = "Người dùng";
             // 
             // btnECreate
             // 
-            this.btnECreate.Location = new System.Drawing.Point(103, 502);
+            this.btnECreate.Location = new System.Drawing.Point(92, 402);
+            this.btnECreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnECreate.Name = "btnECreate";
-            this.btnECreate.Size = new System.Drawing.Size(133, 43);
+            this.btnECreate.Size = new System.Drawing.Size(118, 34);
             this.btnECreate.TabIndex = 9;
             this.btnECreate.Text = "Xác Nhận";
             this.btnECreate.UseVisualStyleBackColor = true;
@@ -398,9 +416,10 @@ namespace NGANHANG_
             // 
             // btnEExit
             // 
-            this.btnEExit.Location = new System.Drawing.Point(347, 502);
+            this.btnEExit.Location = new System.Drawing.Point(308, 402);
+            this.btnEExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEExit.Name = "btnEExit";
-            this.btnEExit.Size = new System.Drawing.Size(133, 43);
+            this.btnEExit.Size = new System.Drawing.Size(118, 34);
             this.btnEExit.TabIndex = 10;
             this.btnEExit.Text = "Hủy";
             this.btnEExit.UseVisualStyleBackColor = true;
@@ -409,34 +428,36 @@ namespace NGANHANG_
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(111, 403);
+            this.label9.Location = new System.Drawing.Point(99, 322);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 19);
+            this.label9.Size = new System.Drawing.Size(49, 17);
             this.label9.TabIndex = 11;
             this.label9.Text = "Quyền";
             // 
             // txtERole
             // 
             this.txtERole.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtERole.Location = new System.Drawing.Point(243, 400);
+            this.txtERole.Location = new System.Drawing.Point(216, 320);
+            this.txtERole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtERole.Name = "txtERole";
             this.txtERole.ReadOnly = true;
-            this.txtERole.Size = new System.Drawing.Size(186, 27);
+            this.txtERole.Size = new System.Drawing.Size(166, 23);
             this.txtERole.TabIndex = 12;
             // 
             // txtEPass
             // 
-            this.txtEPass.Location = new System.Drawing.Point(243, 234);
+            this.txtEPass.Location = new System.Drawing.Point(216, 187);
+            this.txtEPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEPass.Name = "txtEPass";
-            this.txtEPass.Size = new System.Drawing.Size(186, 27);
+            this.txtEPass.Size = new System.Drawing.Size(166, 23);
             this.txtEPass.TabIndex = 13;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(106, 237);
+            this.label13.Location = new System.Drawing.Point(94, 190);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 19);
+            this.label13.Size = new System.Drawing.Size(65, 17);
             this.label13.TabIndex = 14;
             this.label13.Text = "Mật Khẩu";
             // 
@@ -455,9 +476,10 @@ namespace NGANHANG_
             this.grcEdit.Controls.Add(this.txtEPassOld);
             this.grcEdit.Controls.Add(this.txtELogin);
             this.grcEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grcEdit.Location = new System.Drawing.Point(250, 34);
+            this.grcEdit.Location = new System.Drawing.Point(222, 30);
+            this.grcEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcEdit.Name = "grcEdit";
-            this.grcEdit.Size = new System.Drawing.Size(558, 593);
+            this.grcEdit.Size = new System.Drawing.Size(496, 468);
             this.grcEdit.TabIndex = 5;
             this.grcEdit.Text = "SỬA TÀI KHOẢN ĐĂNG NHẬP";
             this.grcEdit.Visible = false;
@@ -490,10 +512,12 @@ namespace NGANHANG_
             // 
             this.gcNV.DataSource = this.bdsNV;
             this.gcNV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcNV.Location = new System.Drawing.Point(0, 34);
+            this.gcNV.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcNV.Location = new System.Drawing.Point(0, 30);
             this.gcNV.MainView = this.gvNV;
+            this.gcNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gcNV.Name = "gcNV";
-            this.gcNV.Size = new System.Drawing.Size(250, 593);
+            this.gcNV.Size = new System.Drawing.Size(222, 468);
             this.gcNV.TabIndex = 11;
             this.gcNV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNV});
@@ -506,6 +530,7 @@ namespace NGANHANG_
             this.colHO,
             this.colTEN,
             this.colMACN});
+            this.gvNV.DetailHeight = 280;
             this.gvNV.GridControl = this.gcNV;
             this.gvNV.Name = "gvNV";
             this.gvNV.OptionsBehavior.Editable = false;
@@ -513,38 +538,38 @@ namespace NGANHANG_
             // colMANV
             // 
             this.colMANV.FieldName = "MANV";
-            this.colMANV.MinWidth = 30;
+            this.colMANV.MinWidth = 27;
             this.colMANV.Name = "colMANV";
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 0;
-            this.colMANV.Width = 112;
+            this.colMANV.Width = 100;
             // 
             // colHO
             // 
             this.colHO.FieldName = "HO";
-            this.colHO.MinWidth = 30;
+            this.colHO.MinWidth = 27;
             this.colHO.Name = "colHO";
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
-            this.colHO.Width = 112;
+            this.colHO.Width = 100;
             // 
             // colTEN
             // 
             this.colTEN.FieldName = "TEN";
-            this.colTEN.MinWidth = 30;
+            this.colTEN.MinWidth = 27;
             this.colTEN.Name = "colTEN";
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
-            this.colTEN.Width = 112;
+            this.colTEN.Width = 100;
             // 
             // colMACN
             // 
             this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 30;
+            this.colMACN.MinWidth = 27;
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
-            this.colMACN.Width = 112;
+            this.colMACN.Width = 100;
             // 
             // barButtonItem1
             // 
@@ -651,38 +676,42 @@ namespace NGANHANG_
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1924, 34);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1710, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 627);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 498);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1924, 20);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1710, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 593);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 468);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1924, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1710, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 593);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 468);
             // 
             // frCreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1924, 647);
+            this.ClientSize = new System.Drawing.Size(1710, 518);
             this.Controls.Add(this.gcNV);
             this.Controls.Add(this.grcEdit);
             this.Controls.Add(this.grcDelete);
@@ -691,6 +720,7 @@ namespace NGANHANG_
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frCreateAccount";
             this.Text = "Tạo Tài Khoản";
             this.Load += new System.EventHandler(this.frCreateAccount_Load);

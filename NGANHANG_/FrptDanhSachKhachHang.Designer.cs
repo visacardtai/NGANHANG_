@@ -38,7 +38,7 @@ namespace NGANHANG_
             // 
             this.cmbChinhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChinhanh.FormattingEnabled = true;
-            this.cmbChinhanh.Location = new System.Drawing.Point(139, 30);
+            this.cmbChinhanh.Location = new System.Drawing.Point(134, 106);
             this.cmbChinhanh.Margin = new System.Windows.Forms.Padding(8);
             this.cmbChinhanh.Name = "cmbChinhanh";
             this.cmbChinhanh.Size = new System.Drawing.Size(240, 24);
@@ -49,7 +49,7 @@ namespace NGANHANG_
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(22, 35);
+            this.label1.Location = new System.Drawing.Point(17, 111);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 19);
@@ -58,23 +58,27 @@ namespace NGANHANG_
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(717, 75);
+            this.button1.BackColor = System.Drawing.Color.Aquamarine;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(431, 100);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(103, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "Preview";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrptDanhSachKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 314);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(603, 314);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbChinhanh);
             this.Controls.Add(this.label1);
             this.Name = "FrptDanhSachKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrptDanhSachKhachHang";
             this.Load += new System.EventHandler(this.FrptDanhSachKhachHang_Load);
             this.ResumeLayout(false);

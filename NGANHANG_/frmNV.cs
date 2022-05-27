@@ -14,7 +14,7 @@ namespace NGANHANG_
 {
     public partial class frmNV : Form
     {
-        string btnClicked = "";
+        
         int vitri = 0;
         public frmNV()
         {
@@ -50,46 +50,6 @@ namespace NGANHANG_
 
         }
 
-        private void nhanVienBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.nhanVienBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dS);
-
-        }
-
-        private void nhanVienBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.nhanVienBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dS);
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pHAILabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pHAITextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void trangThaiXoaLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void trangThaiXoaSpinEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -150,10 +110,6 @@ namespace NGANHANG_
 
         }
 
-        private void pHAILabel1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -319,9 +275,12 @@ namespace NGANHANG_
             if (trangthaixoa.Trim().Equals("0"))
             {
                 btnChuyenCN.Enabled = true;
+                lbthongbaonv.Visible = false; 
+
             }else
             {
                 btnChuyenCN.Enabled = false;
+                lbthongbaonv.Visible = true;
             }
         }
 
@@ -356,15 +315,22 @@ namespace NGANHANG_
                             break;
                     }
                     //lấy ra mã nhân viên lớn nhất ở site chủ: 
-                    int maNVLonNhat = layRaMaNhanvienLonNhatTaiSiteChu(); 
                     
-                    var status = Program.ExecSqlStoredProceduceValue("SP_CHUYEN_CN",
+                    string manv_moi = "";
+                    if (frm.manv_new.Equals("") == false)
+                    {
+                        manv_moi = frm.manv_new; 
+                    }else
+                    {
+                        int maNVLonNhat = layRaMaNhanvienLonNhatTaiSiteChu();
+                        manv_moi = (maNVLonNhat + 1) < 100 ? ("MNV0" + (maNVLonNhat + 1)) : ("MNV" + (maNVLonNhat + 1)); 
+                    }
+                    var status = Program.ExecSqlNonQuery("SP_CHUYEN_CN",
                                         new List<SqlParameter> { new SqlParameter("@MANV", manv.Trim()),
-                                                                new SqlParameter("@MANV2", (maNVLonNhat+1)<100?("MNV0"+(maNVLonNhat+1)) : ("MNV"+(maNVLonNhat+1))),
+                                                                new SqlParameter("@MANV2", manv_moi),
                                                                 new SqlParameter("@MACN", macn_new.Trim())},
                                         CommandType.StoredProcedure);
-                    MessageBox.Show(status.ToString());
-                    if (status == 0)
+                    if (status == 2)
                     {
 
                         MessageBox.Show("Chuyển chi nhánh thành công.");

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -82,6 +82,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChuyenCN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,12 +130,29 @@
     <Compile Include="frmNV.Designer.cs">
       <DependentUpon>frmNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrptDanhSachKhachHang.cs">
+    <Compile Include="frptLietKeDanhSachTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frptLietKeDanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>frptLietKeDanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
+
+<Compile Include="FrptDanhSachKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrptDanhSachKhachHang.Designer.cs">
       <DependentUpon>FrptDanhSachKhachHang.cs</DependentUpon>
     </Compile>
+
+
+<Compile Include="Frpt_SaoKeGiaoDichKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_SaoKeGiaoDichKhachHang.Designer.cs">
+      <DependentUpon>Frpt_SaoKeGiaoDichKhachHang.cs</DependentUpon>
+    </Compile>
+
+
     <Compile Include="KHACHHANGDS.cs">
       <DependentUpon>KHACHHANGDS.xsd</DependentUpon>
     </Compile>
@@ -140,12 +163,43 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XrptDanhSachKhachHang.cs">
+    <Compile Include="XrptLietKeDanhSachTaiKhoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XrptLietKeDanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>XrptLietKeDanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
+
+
+<Compile Include="XrptDanhSachKhachHang.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XrptDanhSachKhachHang.Designer.cs">
       <DependentUpon>XrptDanhSachKhachHang.cs</DependentUpon>
     </Compile>
+
+<Compile Include="Xrpt_SaoKeGiaoDichKhachHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_SaoKeGiaoDichKhachHang.Designer.cs">
+      <DependentUpon>Xrpt_SaoKeGiaoDichKhachHang.cs</DependentUpon>
+    </Compile>
+
+
+<Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+<Compile Include="frmChuyenTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChuyenTien.Designer.cs">
+      <DependentUpon>frmChuyenTien.cs</DependentUpon>
+    </Compile>
+
+
     <EmbeddedResource Include="frmChuyenCN.resx">
       <DependentUpon>frmChuyenCN.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +221,19 @@
     <EmbeddedResource Include="frmNV.resx">
       <DependentUpon>frmNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrptDanhSachKhachHang.resx">
+
+    <EmbeddedResource Include="frptLietKeDanhSachTaiKhoan.resx">
+      <DependentUpon>frptLietKeDanhSachTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+
+<EmbeddedResource Include="FrptDanhSachKhachHang.resx">
       <DependentUpon>FrptDanhSachKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+
+<EmbeddedResource Include="Frpt_SaoKeGiaoDichKhachHang.resx">
+      <DependentUpon>Frpt_SaoKeGiaoDichKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,9 +245,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="XrptDanhSachKhachHang.resx">
-      <DependentUpon>XrptDanhSachKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="XrptLietKeDanhSachTaiKhoan.resx">
+      <DependentUpon>XrptLietKeDanhSachTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+<EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+<EmbeddedResource Include="frmChuyenTien.resx">
+      <DependentUpon>frmChuyenTien.cs</DependentUpon>
+    </EmbeddedResource>
+
     <None Include="App.config" />
     <None Include="DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>

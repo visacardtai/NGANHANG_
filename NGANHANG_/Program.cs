@@ -14,6 +14,7 @@ namespace NGANHANG_
         /// </summary>
         /// 
         public static String server_publisher = "TIEN-TAI\\TRUSO";
+        public static String server_tracuu = "TIEN-TAI\\CHINHANH3";
         public static String servername = "";
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
@@ -28,7 +29,7 @@ namespace NGANHANG_
         public static String passwordDN = "";
         public static String database = "NGANHANG";
         public static String remotelogin = "HTKN";
-        public static String remotepassword = "123";
+        public static String remotepassword = "1111";
         public static String mlogin = "";
         public static String mGroup = "";
         public static String mHoten = "";
@@ -118,10 +119,15 @@ namespace NGANHANG_
             if (parameters != null) cmd.Parameters.AddRange(parameters.ToArray());
             cmd.CommandType = type;
             cmd.CommandTimeout = 600;//secound
-
+            
             try
             {
+
                 return (int)cmd.ExecuteScalar();
+
+                int value = (int)cmd.ExecuteScalar();
+                conn.Close();
+                return value; 
             }
             catch (SqlException e)
             {
@@ -129,6 +135,7 @@ namespace NGANHANG_
                 conn.Close();
                 return e.State;//trạng thái lỗi gửi từ raiserror trong sql server qua
             }
+
         }
 
         public static SqlDataReader ExecSqlDataReader(String strLenh, List<SqlParameter> parameters, CommandType type)

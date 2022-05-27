@@ -42,13 +42,13 @@ namespace NGANHANG_
             this.pgGuiRut = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnGuiRut = new DevExpress.XtraBars.BarButtonItem();
             this.pgChuyenTien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnCLCN = new DevExpress.XtraBars.BarButtonItem();
             this.btnCT = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCLCN = new DevExpress.XtraBars.BarButtonItem();
             this.pageBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pgBCNV = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnKXNV = new DevExpress.XtraBars.BarButtonItem();
             this.pgBCKH = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnSK = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSKSTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnKHKH = new DevExpress.XtraBars.BarButtonItem();
             this.pgHTTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
@@ -81,6 +81,7 @@ namespace NGANHANG_
             this.pgKhachhang});
             this.pageDanhMuc.Name = "pageDanhMuc";
             this.pageDanhMuc.Text = "Danh Mục";
+            this.pageDanhMuc.Visible = false;
             // 
             // pgNhanVien
             // 
@@ -136,10 +137,19 @@ namespace NGANHANG_
             // 
             // pgChuyenTien
             // 
-            this.pgChuyenTien.ItemLinks.Add(this.btnCLCN);
             this.pgChuyenTien.ItemLinks.Add(this.btnCT);
             this.pgChuyenTien.Name = "pgChuyenTien";
             this.pgChuyenTien.Text = "Chuyển Tiền";
+            // 
+            // btnCT
+            // 
+            this.btnCT.Caption = "Chuyển Thường";
+            this.btnCT.Id = 9;
+            this.btnCT.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_Transaction;
+            this.btnCT.Name = "btnCT";
+            this.btnCT.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnCT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCT_ItemClick);
             // 
             // btnCLCN
             // 
@@ -148,14 +158,6 @@ namespace NGANHANG_
             this.btnCLCN.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_transfer;
             this.btnCLCN.Name = "btnCLCN";
             this.btnCLCN.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // btnCT
-            // 
-            this.btnCT.Caption = "Chuyển Thường";
-            this.btnCT.Id = 9;
-            this.btnCT.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_Transaction;
-            this.btnCT.Name = "btnCT";
-            this.btnCT.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // pageBaoCao
             // 
@@ -170,7 +172,7 @@ namespace NGANHANG_
             // 
             this.pgBCNV.ItemLinks.Add(this.btnKXNV);
             this.pgBCNV.Name = "pgBCNV";
-            this.pgBCNV.Text = "Nhân Viên";
+            this.pgBCNV.Text = "Tài Khoản";
             // 
             // btnKXNV
             // 
@@ -178,21 +180,23 @@ namespace NGANHANG_
             this.btnKXNV.Id = 11;
             this.btnKXNV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKXNV.ImageOptions.SvgImage")));
             this.btnKXNV.Name = "btnKXNV";
+            this.btnKXNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKXNV_ItemClick);
             // 
             // pgBCKH
             // 
-            this.pgBCKH.ItemLinks.Add(this.btnSK);
+            this.pgBCKH.ItemLinks.Add(this.btnSKSTK);
             this.pgBCKH.ItemLinks.Add(this.btnKHKH);
             this.pgBCKH.Name = "pgBCKH";
-            this.pgBCKH.Text = "Khách Hàng";
+            this.pgBCKH.Text = "Chi Nhánh";
             // 
-            // btnSK
+            // btnSKSTK
             // 
-            this.btnSK.Caption = "Sao Kê";
-            this.btnSK.Id = 12;
-            this.btnSK.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_graph;
-            this.btnSK.Name = "btnSK";
-            this.btnSK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSKSTK.Caption = "Sao Kê";
+            this.btnSKSTK.Id = 12;
+            this.btnSKSTK.ImageOptions.SvgImage = global::NGANHANG_.Properties.Resources.icons8_graph;
+            this.btnSKSTK.Name = "btnSKSTK";
+            this.btnSKSTK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSKSTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSKSTK_ItemClick);
             // 
             // btnKHKH
             // 
@@ -294,12 +298,12 @@ namespace NGANHANG_
             this.btnCLCN,
             this.btnCT,
             this.btnKXNV,
-            this.btnSK,
+            this.btnSKSTK,
             this.btnKHKH,
             this.barButtonItem14,
             this.barWorkspaceMenuItem1});
             this.ribbonControl2.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(6);
             this.ribbonControl2.MaxItemId = 25;
             this.ribbonControl2.Name = "ribbonControl2";
             this.ribbonControl2.OptionsMenuMinWidth = 495;
@@ -370,7 +374,7 @@ namespace NGANHANG_
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgBCNV;
         private DevExpress.XtraBars.BarButtonItem btnKXNV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgBCKH;
-        private DevExpress.XtraBars.BarButtonItem btnSK;
+        private DevExpress.XtraBars.BarButtonItem btnSKSTK;
         private DevExpress.XtraBars.BarButtonItem btnKHKH;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup pgHTTK;
         private DevExpress.XtraBars.BarButtonItem btnLogin;

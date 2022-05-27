@@ -89,7 +89,14 @@ namespace NGANHANG_
 
         private void btnKH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form frm = this.CheckExists(typeof(frmUser));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmUser fmNV = new frmUser();
+                fmNV.MdiParent = this;
+                fmNV.Show();
+            }
         }
 
         private void btnGuiRut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -104,6 +111,17 @@ namespace NGANHANG_
             }
         }
 
+        private void btnSKSTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(Frpt_SaoKeGiaoDichKhachHang));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Frpt_SaoKeGiaoDichKhachHang f = new Frpt_SaoKeGiaoDichKhachHang();
+                f.Show();
+            }
+        }
+
         private void btnKHKH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(FrptDanhSachKhachHang));
@@ -115,5 +133,29 @@ namespace NGANHANG_
                 fmNV.Show();
             }
         }
+
+        private void btnCT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmChuyenTien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmChuyenTien fmNV = new frmChuyenTien();
+                fmNV.MdiParent = this;
+                fmNV.Show();
+            }
+        }
+
+        private void btnKXNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frptLietKeDanhSachTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frptLietKeDanhSachTaiKhoan f = new frptLietKeDanhSachTaiKhoan();
+                f.Show();
+            }
+        }
+
     }
 }

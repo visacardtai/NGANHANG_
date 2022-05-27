@@ -33,6 +33,7 @@ namespace NGANHANG_
         {
             loadTK();
             loadGD();
+           
         }
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace NGANHANG_
         }
         public void loadGD()
         {
+            
             this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.nhanVienTableAdapter.Fill(this.KHACHHANGDS.NhanVien);
             this.giaoDichTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -75,10 +77,11 @@ namespace NGANHANG_
             cmbLoaiGD.SelectedItem  = "Gởi tiền";
             giaoDichBindingSource.Filter = "LOAIGD='GT' OR LOAIGD='RT'";
             setupButton();
+
         }
         private void setupButton()
         {
-            if (Program.mGroup == "NGANHANG")
+            if (Program.mGroup == "NganHang")
             {
                 btnLapGiaoDich.Enabled = false;
             }
@@ -201,6 +204,11 @@ namespace NGANHANG_
         private void cmbLoaiGD_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void cmbChinhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -35,9 +35,11 @@ namespace NGANHANG_
             {
                 lbThongbao.Text = "Nhân viên hiện đang thuộc chi nhánh này.";
                 lbThongbao.Visible = true;
-                //txtManv.Visible = false;
+                btnVerify.Enabled = false; 
                 return;
             }
+            btnVerify.Enabled = true; 
+            lbThongbao.Visible = false;
             switch (cbChinhanh.SelectedIndex)
             {
                 case 0:
@@ -47,7 +49,7 @@ namespace NGANHANG_
                     macn = "TANDINH";
                     break;
             }
-            DataTable dt = new DataTable();
+            
             if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
             SqlDataReader sqlDataReader;
             sqlDataReader = Program.ExecSqlDataReader("SP_TIM_NV_TRONG_CN_KHAC",
@@ -55,43 +57,21 @@ namespace NGANHANG_
                                                     new SqlParameter("@SODT", sodt),
                                                     new SqlParameter("@MACN", macn)},
                             CommandType.StoredProcedure);
-            if (!sqlDataReader.Read())
+            if (sqlDataReader.Read())
             {
-                lbThongbao.Text = "Nhân viên chưa từng làm việc ở chi nhánh này!";
-                lbThongbao.Visible = true;
-                //txtManv.Visible = true;
-                manv_new = "";
+
+                manv_new = sqlDataReader.GetString(0);
             }
             else
             {
-                //sqlDataReader.Read();
-                manv_new = sqlDataReader.GetString(0);
-                lbThongbao.Text = "Nhân viên đã từng làm việc ở chi nhánh này với Mã NV là: " + manv_new;
+                manv_new = ""; 
             }
             sqlDataReader.Close();
+
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
         {
-           /* if (manv_new == "" && (manv_new = txtManv.Text.Trim()) == "")
-            {
-                if (txtManv.Visible == true) MessageBox.Show("Vui lòng điền mã nhân viên mới");
-                return;
-            }
-            if (txtManv.Visible == true)
-            {
-                SqlDataReader sqlDataReader = Program.ExecSqlDataReader("sp_tim_nv",
-                                                    new List<SqlParameter> { new SqlParameter("@MANV", manv_new) },
-                                                    CommandType.StoredProcedure);
-                if (sqlDataReader.Read())
-                {
-                    MessageBox.Show("Mã nhân viên đã tồn tại");
-                    manv_new = "";
-                    sqlDataReader.Close();
-                    return;
-                }
-                sqlDataReader.Close();
-            }*/
             this.DialogResult = DialogResult.OK;
             selectedIndex = cbChinhanh.SelectedIndex;
         }

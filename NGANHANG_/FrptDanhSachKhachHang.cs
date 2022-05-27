@@ -18,11 +18,14 @@ namespace NGANHANG_
             InitializeComponent();
         }
 
+        public string mcn = "";
+
         private void FrptDanhSachKhachHang_Load(object sender, EventArgs e)
         {
             cmbChinhanh.DataSource = Program.bds_dspm;
             cmbChinhanh.DisplayMember = "TENCN";
             cmbChinhanh.ValueMember = "TENSERVER";
+            mcn = cmbChinhanh.SelectedValue.ToString();
             cmbChinhanh.SelectedIndex = Program.mChinhanh;
 
             if (Program.mGroup.Equals("ChiNhanh"))
@@ -37,12 +40,12 @@ namespace NGANHANG_
 
         private void cmbChinhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
                 if (cmbChinhanh.SelectedValue.ToString() != "System.Data.DataRowView")
                 {
                     Program.servername = cmbChinhanh.SelectedValue.ToString();
+                mcn = cmbChinhanh.SelectedValue.ToString();
                 }
+           
                /* if (cmbChinhanh.SelectedIndex != Program.mChinhanh)
                 {
                     Program.mlogin = Program.remotelogin;
@@ -54,17 +57,15 @@ namespace NGANHANG_
                     Program.password = Program.passwordDN;
                 }*/
 
-            }
-            catch
-            {
-                return;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            XrptDanhSachKhachHang rpt = new XrptDanhSachKhachHang();
-            rpt.lbTieuDe.Text = "DANH SÁCH KHÁCH HÀNG";
+            string MACN ="";
+            if (mcn == @"TIEN-TAI\CHINHANH1") { MACN = "BENTHANH"; }
+            else { MACN = "TANDINH"; }
+            XrptDanhSachKhachHang rpt = new XrptDanhSachKhachHang(MACN);
+            rpt.lbTieuDe .Text = "DANH SÁCH KHÁCH HÀNG";
             rpt.xlbTenNV.Text = Program.mHoten;
             rpt.xlbNhom.Text = Program.mGroup;
 
